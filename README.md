@@ -33,7 +33,7 @@ Explorează funcționalitățile aplicației Respiro Fresh Air și descarcă-o p
 
 ### Contact
 
-Pentru mai multe informații sau întrebări, nu ezita să ne contactezi la [info@respiro-fresh-air.com](mailto:info@respiro-fresh-air.com).
+Pentru mai multe informații sau întrebări, nu ezita să ne contactezi la [respiro@gmail.com](mailto:respiro@gmail.com).
 
 ## Cum să Folosești Proiectul
 
