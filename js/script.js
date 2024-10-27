@@ -14,11 +14,4 @@ document.addEventListener("DOMContentLoaded", function() {
             behavior: "smooth"
         });
     }
-
-    // Pop-up message on download link
-    const downloadLink = document.querySelector("section#app a");
-    downloadLink.addEventListener("click", function(event) {
-        event.preventDefault();
-        alert("Mulțumim că ai ales Respiro Fresh Air! Descărcarea aplicației va începe în curând.");
-    });
 });
