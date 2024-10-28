@@ -15,46 +15,9 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Scroll animations
-    const scrollElements = document.querySelectorAll(".scroll-element");
-
-    const elementInView = (el, dividend = 1) => {
-        const elementTop = el.getBoundingClientRect().top;
-        return (
-            elementTop <= 
-            (window.innerHeight || document.documentElement.clientHeight) / dividend
-        );
-    };
-
-    const displayScrollElement = (element) => {
-        element.classList.add("scrolled");
-    };
-
-    const handleScrollAnimation = () => {
-        scrollElements.forEach((el) => {
-            if (elementInView(el, 1.25)) {
-                displayScrollElement(el);
-            }
-        })
-    };
-
-    window.addEventListener("scroll", () => {
-        handleScrollAnimation();
+    // Remove pop-up message on download link
+    const downloadLink = document.querySelector("section#app a.download-button");
+    downloadLink.addEventListener("click", function(event) {
+        // Do nothing, let the download happen
     });
-
-    handleScrollAnimation(); // Trigger the animation on load
-
-    // Sticky navigation
-    const navbar = document.querySelector("nav");
-    const sticky = navbar.offsetTop;
-
-    const stickyNavigation = () => {
-        if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky");
-        } else {
-            navbar.classList.remove("sticky");
-        }
-    };
-
-    window.addEventListener("scroll", stickyNavigation);
 });
