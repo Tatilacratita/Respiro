@@ -1,16 +1,67 @@
-/* Smooth scroll effect */
-html {
-    scroll-behavior: smooth;
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-/* Navigation bar styling */
-nav.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+/* Header and footer styles */
+header, footer {
+    background-color: #28a745;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Section styles */
+section {
+    padding: 40px 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+section h2 {
+    color: #28a745;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Button styles */
+a.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: #28a745;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+a.download-button:hover {
+    background-color: #218838;
 }
 
 /* Scroll animations */
@@ -25,19 +76,12 @@ nav.sticky {
     transform: translateY(0);
 }
 
-/* Hover effects */
-a:hover {
-    color: #f39c12;
-    text-decoration: underline;
-}
-
-button:hover {
-    background-color: #f39c12;
-    color: #fff;
-}
-
-/* Background color change on hover for sections */
-section:hover {
-    background-color: #f8f8f8;
-    transition: background-color 0.3s ease;
+/* Sticky navigation */
+nav.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(40, 167, 69, 0.9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
