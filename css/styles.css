@@ -1,87 +1,83 @@
-/* General styles */
+/* styles.css */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* Header and footer styles */
-header, footer {
-    background-color: #28a745;
+header {
+    background-color: #4CAF50;
     color: white;
-    padding: 20px 0;
     text-align: center;
+    padding: 1em 0;
 }
 
 nav ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
 }
 
 nav ul li {
-    margin: 0 15px;
+    display: inline;
+    margin: 0 1em;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Section styles */
 section {
-    padding: 40px 20px;
-    border-bottom: 1px solid #ccc;
+    padding: 2em;
+    text-align: center;
 }
 
-section h2 {
-    color: #28a745;
-    font-size: 2em;
-    margin-bottom: 20px;
+h2 {
+    color: #4CAF50;
 }
 
-/* Button styles */
-a.download-button {
-    display: inline-block;
-    padding: 10px 20px;
+footer {
+    background-color: #4CAF50;
     color: white;
-    background-color: #28a745;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.2em;
-    margin-top: 20px;
-    transition: background-color 0.3s;
-}
-
-a.download-button:hover {
-    background-color: #218838;
-}
-
-/* Scroll animations */
-.scroll-element {
-    opacity: 0;
-    transform: translateY(100px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.scroll-element.scrolled {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Sticky navigation */
-nav.sticky {
-    position: fixed;
-    top: 0;
+    text-align: center;
+    padding: 1em 0;
+    position: absolute;
     width: 100%;
-    background-color: rgba(40, 167, 69, 0.9);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    bottom: 0;
+}
+
+button.download-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 1em 2em;
+    text-decoration: none;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button.download-button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 0.5em 0;
+    }
+    
+    section {
+        padding: 1em;
+    }
+    
+    img {
+        width: 100%;
+        height: auto;
+    }
+    
+    footer {
+        position: relative;
+    }
 }
