@@ -1,66 +1,43 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+/* Smooth scroll effect */
+html {
+    scroll-behavior: smooth;
 }
 
-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 1rem 0;
-    text-align: center;
+/* Navigation bar styling */
+nav.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+/* Scroll animations */
+.scroll-element {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
+.scroll-element.scrolled {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
+/* Hover effects */
+a:hover {
+    color: #f39c12;
+    text-decoration: underline;
 }
 
-section {
-    padding: 2rem;
-    margin: 1rem 0;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+button:hover {
+    background-color: #f39c12;
+    color: #fff;
 }
 
-section h2 {
-    color: #4CAF50;
-}
-
-section#app a {
-    display: inline-block;
-    background-color: #4CAF50;
-    color: white;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 1rem;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-    margin-top: 1rem;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+/* Background color change on hover for sections */
+section:hover {
+    background-color: #f8f8f8;
+    transition: background-color 0.3s ease;
 }
