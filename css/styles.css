@@ -78,6 +78,6 @@ button.download-button:hover {
     }
     
     footer {
-        position: absolute;
+        position: relative;
     }
 }
