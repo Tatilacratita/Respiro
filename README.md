@@ -37,19 +37,20 @@ Pentru mai multe informații sau întrebări, nu ezita să ne contactezi la [res
 
 ## Cum să Folosești Proiectul
 
-1. **Clonează repository-ul:**
+1. **Acceseză pagina:**
     ```sh
-    git clone https://github.com/username/respiro-fresh-air.git
+    (https://tatilacratita.github.io/Respiro/)
     ```
 
-2. **Navighează în directorul proiectului:**
+2. **Navighează pe pagina la tab-ul Aplicația Noastră:**
     ```sh
-    cd respiro-fresh-air
+    Mergi la "Descarca acum APK"
     ```
 
-3. **Deschide fișierul `index.html` în browserul tău preferat:**
+3. **Instalează aplicația pe telefonul tău :**
     ```sh
-    open index.html
+    Notă: Pentru a instala această aplicație, este posibil să fie nevoie să permiți instalarea aplicațiilor din surse necunoscute.
+    Mergi la Setări > Securitate pe dispozitivul tău și activează opțiunea Surse Necunoscute.
     ```
 
 ## Contribuie
