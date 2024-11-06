@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // Verifică dacă URL-ul conține "www" și redirecționează la varianta fără "www"
+        if (window.location.hostname.startsWith("www")) {
+            const newUrl = "https://" + window.location.hostname.replace(/^www\./, "") + window.location.pathname + window.location.search;
+            window.location.replace(newUrl);
+        }
+    </script>
     <title>Respiro Fresh Air - Importanța Calității Aerului</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
