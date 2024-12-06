@@ -1,10 +1,26 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // Verifică dacă URL-ul conține "www" și redirecționează la varianta fără "www"
+        if (window.location.hostname.startsWith("www")) {
+            const newUrl = "https://" + window.location.hostname.replace(/^www\./, "") + window.location.pathname + window.location.search;
+            window.location.replace(newUrl);
+        }
+    </script>
     <title>Respiro Fresh Air - Importanța Calității Aerului</title>
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Stilizare imagine mică pentru butonul de descărcare */
+        .download-button img {
+            width: 20px; /* Dimensiune redusă pentru imagine */
+            height: auto;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -16,78 +32,69 @@
                 <li><a href="#pollutants">Poluanți Comuni</a></li>
                 <li><a href="#app">Aplicația Noastră</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#privacy">Politica de Confidențialitate</a></li>
+                <li><a href="#privacy">Politica de Confidențialitate</a></li> <!-- Nou -->
             </ul>
         </nav>
     </header>
 
     <section id="about">
         <h2>Despre Noi</h2>
-        <p>Respiro Fresh Air este aplicația care te ajută să monitorizezi calitatea aerului în timp real. Descoperă cum tehnologia poate face diferența în protejarea sănătății tale și a celor dragi.</p>
+        <p>Respiro Fresh Air este o aplicație dedicată monitorizării calității aerului în timp real. Cu ajutorul acestei aplicații, utilizatorii pot verifica nivelurile de poluare din zona în care se află și pot primi sfaturi pentru a-și proteja sănătatea.</p>
         <img src="img/about.jpg" alt="Imagine despre calitatea aerului">
     </section>
 
     <section id="importance">
         <h2>Importanța Calității Aerului</h2>
-        <div class="content">
-            <img src="img/importance.jpg" alt="Importanța aerului">
-            <p>Calitatea aerului joacă un rol esențial în viața noastră. De la sănătatea plămânilor până la prevenirea bolilor cardiovasculare, monitorizarea poluării devine o prioritate globală. Cu aplicația noastră, poți să-ți protejezi sănătatea într-un mod simplu și eficient.</p>
-        </div>
+        <p>Calitatea aerului pe care îl respirăm are un impact direct asupra sănătății noastre. Aerul poluat poate cauza diverse probleme de sănătate, inclusiv boli respiratorii, cardiovasculare și chiar cancer. De aceea, este esențial să fim conștienți de calitatea aerului și să luăm măsuri pentru a reduce expunerea la poluanți.</p>
+        <p>Valorile măsurate de stațiile de colectare sunt calculate în µg/m³. µg/m³ înseamnă micrograme pe metru cub.</p>
+        <ul>
+            <li><strong>Aer Curat:</strong> < 10 µg/m³ 🌱</li>
+            <li><strong>Valoare Moderată a Aerului:</strong> 10.01 - 15 µg/m³ 🌼</li>
+            <li><strong>Aer Poluat:</strong> 15.01 - 25 µg/m³ 🌧️</li>
+            <li><strong>Aer Extrem de Poluat:</strong> > 25 µg/m³ 💔</li>
+        </ul>
+        <img src="img/importance.jpg" alt="Importanța calității aerului">
     </section>
 
     <section id="pollutants">
         <h2>Poluanți Comuni</h2>
-        <div class="content">
-            <p>Identifică principalele surse de poluare care îți pot afecta sănătatea:</p>
-            <ul>
-                <li>Particulele fine (PM2.5)</li>
-                <li>Oxizii de azot (NOx)</li>
-                <li>Ozonul la nivelul solului (O3)</li>
-                <li>Monoxidul de carbon (CO)</li>
-            </ul>
-            <img src="img/pollutants.jpg" alt="Poluanți comuni">
-        </div>
+        <ul>
+            <li><strong>Particulele fine (PM2.5):</strong> Acestea pot pătrunde adânc în plămâni și pot cauza inflamații și alte probleme respiratorii.</li>
+            <li><strong>Oxizii de azot (NOx):</strong> Proveniți în principal din emisiile vehiculelor, aceștia pot irita căile respiratorii și pot agrava afecțiuni precum astmul.</li>
+            <li><strong>Ozonul la nivelul solului (O3):</strong> Acesta poate cauza iritații ale ochilor și ale căilor respiratorii și poate reduce funcția pulmonară.</li>
+            <li><strong>Monoxidul de carbon (CO):</strong> Acest gaz incolor și inodor poate afecta transportul oxigenului în organism, ducând la simptome de oboseală și dureri de cap.</li>
+        </ul>
+        <img src="img/pollutants.jpg" alt="Poluanți comuni">
     </section>
 
     <section id="app">
         <h2>Aplicația Noastră</h2>
-        <div class="content">
-            <p>Aplicația Respiro Fresh Air îți permite să monitorizezi calitatea aerului în timp real, oferindu-ți informații detaliate și recomandări pentru sănătatea ta. <strong>Descoperă cât de ușor este să fii informat!</strong></p>
-            <a href="https://play.google.com/store/apps/details?id=com.respiro.freshair" class="download-button">Descarcă din Google Play</a>
-            <img src="img/google.jpg" alt="Prezentare aplicație">
-        </div>
+        <p>Aplicația Respiro Fresh Air este simplă, dar esențială pentru oricine dorește să monitorizeze calitatea aerului din jurul său. Cu funcții intuitive și informații precise, aplicația noastră te ajută să iei decizii informate pentru a-ți proteja sănătatea.</p>
+        <a href="downloads/Respiro-release.apk" class="download-button" download>
+            <img src="img/google.jpg" alt="Icon Google"> Descarcă acum APK
+        </a>
+        <p><strong>Notă🌼🌼🌼:</strong> Pentru a instala această aplicație, este posibil să fie nevoie să permiți instalarea aplicațiilor din surse necunoscute. Mergi la <em>Setări > Securitate</em> pe dispozitivul tău și activează opțiunea <strong>Surse Necunoscute</strong>.</p>
     </section>
 
     <section id="contact">
         <h2>Contact</h2>
-        <p>Dacă ai întrebări, ne poți contacta la <a href="mailto:respirofreshair@gmail.com">respirofreshair@gmail.com</a>.</p>
+        <p>Pentru mai multe informații, nu ezita să ne contactezi la <a href="mailto:respirofreshair@gmail.com">respirofreshair@gmail.com</a>.</p>
     </section>
 
-   <h2>Politica de Confidențialitate</h2>
-    <p>
-        Respiro Fresh Air respectă confidențialitatea utilizatorilor săi și se angajează să protejeze informațiile acestora. Aplicația utilizează <strong>locația utilizatorului</strong> pentru a oferi informații despre calitatea aerului în zona în care se află.
-    </p>
-    <p>
-        <strong>Date colectate:</strong> Aplicația nu colectează și nu stochează date personale sau informații identificabile ale utilizatorilor. Locația utilizatorului este utilizată strict pentru a accesa datele de poluare disponibile prin serviciul <em>OpenAQ API</em>.
-    </p>
-    <p>
-        <strong>Partajarea datelor:</strong> Locația este trimisă către API-ul OpenAQ exclusiv pentru a obține date despre calitatea aerului. Nicio altă informație personală nu este partajată cu terți.
-    </p>
-    <p>
-        <strong>Consimțământ:</strong> Utilizarea locației necesită permisiunea explicită a utilizatorului. Aceasta poate fi acordată sau refuzată la lansarea aplicației.
-    </p>
-    <p>
-        <strong>Utilizare transparentă:</strong> Datele de locație sunt utilizate doar pentru a îmbunătăți funcționalitatea aplicației și pentru a oferi informații precise despre calitatea aerului. Aplicația nu folosește locația în scopuri de marketing sau analiză.
-    </p>
-    <p>
-        Dacă aveți întrebări sau îngrijorări cu privire la confidențialitatea datelor, ne puteți contacta la 
-        <a href="mailto:respirofreshair@gmail.com">respirofreshair@gmail.com</a>.
-    </p>
-</section>
-
+    <section id="privacy">
+        <h2>Politica de Confidențialitate</h2>
+        <p>Respiro Fresh Air respectă confidențialitatea utilizatorilor săi și se angajează să protejeze informațiile acestora. Aplicația utilizează <strong>locația utilizatorului</strong> pentru a oferi informații despre calitatea aerului în zona în care se află.</p>
+        <p><strong>Date colectate:</strong> Aplicația nu colectează și nu stochează date personale sau informații identificabile ale utilizatorilor. Locația utilizatorului este utilizată strict pentru a accesa datele de poluare disponibile prin serviciul <em>OpenAQ API</em>.</p>
+        <p><strong>Partajarea datelor:</strong> Locația este trimisă către API-ul OpenAQ exclusiv pentru a obține date despre calitatea aerului. Nicio altă informație personală nu este partajată cu terți.</p>
+        <p><strong>Consimțământ:</strong> Utilizarea locației necesită permisiunea explicită a utilizatorului. Aceasta poate fi acordată sau refuzată la lansarea aplicației.</p>
+        <p><strong>Utilizare transparentă:</strong> Datele de locație sunt utilizate doar pentru a îmbunătăți funcționalitatea aplicației și pentru a oferi informații precise despre calitatea aerului. Aplicația nu folosește locația în scopuri de marketing sau analiză.</p>
+        <p>Dacă aveți întrebări sau îngrijorări cu privire la confidențialitatea datelor, ne puteți contacta la <a href="mailto:respirofreshair@gmail.com">respirofreshair@gmail.com</a>.</p>
+    </section>
 
     <footer>
-        <p>&copy; 2024 Respiro Fresh Air. Toate drepturile rezervate. Creat de Tati La Cratita.</p>
+        <p>&copy; 2024 Respiro Fresh Air. Toate drepturile rezervate. © By Tati La Cratita</p>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
