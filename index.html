@@ -1,15 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>
-        // Verifică dacă URL-ul conține "www" și redirecționează la varianta fără "www"
-        if (window.location.hostname.startsWith("www")) {
-            const newUrl = "https://" + window.location.hostname.replace(/^www\./, "") + window.location.pathname + window.location.search;
-            window.location.replace(newUrl);
-        }
-    </script>
     <title>Respiro Fresh Air - Importanța Calității Aerului</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -23,46 +16,78 @@
                 <li><a href="#pollutants">Poluanți Comuni</a></li>
                 <li><a href="#app">Aplicația Noastră</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="#privacy">Politica de Confidențialitate</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="about" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem;">
-        <div style="width: 50%;">
-            <h2>Despre Noi</h2>
-            <p>Respiro Fresh Air este aplicația care îți transformă viața! Monitorizează calitatea aerului oriunde te-ai afla și află cum să respiri aer mai curat.</p>
-        </div>
-        <img src="img/about.jpg" alt="Imagine despre calitatea aerului" style="width: 45%; border-radius: 8px;">
+    <section id="about">
+        <h2>Despre Noi</h2>
+        <p>Respiro Fresh Air este aplicația care te ajută să monitorizezi calitatea aerului în timp real. Descoperă cum tehnologia poate face diferența în protejarea sănătății tale și a celor dragi.</p>
+        <img src="img/about.jpg" alt="Imagine despre calitatea aerului">
     </section>
 
-    <section id="importance" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem; flex-direction: row-reverse;">
-        <div style="width: 50%;">
-            <h2>Importanța Calității Aerului</h2>
-            <p>Respiră aer curat și protejează-ți sănătatea! Cu Respiro, descoperi valorile aerului din zona ta și primești recomandări personalizate pentru un stil de viață mai sănătos.</p>
+    <section id="importance">
+        <h2>Importanța Calității Aerului</h2>
+        <div class="content">
+            <img src="img/importance.jpg" alt="Importanța aerului">
+            <p>Calitatea aerului joacă un rol esențial în viața noastră. De la sănătatea plămânilor până la prevenirea bolilor cardiovasculare, monitorizarea poluării devine o prioritate globală. Cu aplicația noastră, poți să-ți protejezi sănătatea într-un mod simplu și eficient.</p>
         </div>
-        <img src="img/importance.jpg" alt="Importanța calității aerului" style="width: 45%; border-radius: 8px;">
+    </section>
+
+    <section id="pollutants">
+        <h2>Poluanți Comuni</h2>
+        <div class="content">
+            <p>Identifică principalele surse de poluare care îți pot afecta sănătatea:</p>
+            <ul>
+                <li>Particulele fine (PM2.5)</li>
+                <li>Oxizii de azot (NOx)</li>
+                <li>Ozonul la nivelul solului (O3)</li>
+                <li>Monoxidul de carbon (CO)</li>
+            </ul>
+            <img src="img/pollutants.jpg" alt="Poluanți comuni">
+        </div>
     </section>
 
     <section id="app">
         <h2>Aplicația Noastră</h2>
-        <p>Descoperă cât de simplu este să-ți monitorizezi sănătatea! Descarcă aplicația Respiro Fresh Air și transformă fiecare respirație într-un moment de siguranță.</p>
-        <div style="text-align: center;">
-            <a href="https://play.google.com/store/apps/details?id=com.tatilacratita.respiro" class="download-button" style="display: inline-block; padding: 12px 24px; background-color: #28a745; color: #fff; text-decoration: none; border-radius: 5px; font-weight: bold;">Download din Google Play</a>
-        </div>
-        <div style="margin-top: 1rem; text-align: center;">
-            <img src="img/google.png" alt="Google Play" style="width: 150px;">
+        <div class="content">
+            <p>Aplicația Respiro Fresh Air îți permite să monitorizezi calitatea aerului în timp real, oferindu-ți informații detaliate și recomandări pentru sănătatea ta. <strong>Descoperă cât de ușor este să fii informat!</strong></p>
+            <a href="https://play.google.com/store/apps/details?id=com.respiro.freshair" class="download-button">Descarcă din Google Play</a>
+            <img src="img/google.jpg" alt="Prezentare aplicație">
         </div>
     </section>
 
-    <section id="contact" style="margin-top: 2rem;">
+    <section id="contact">
         <h2>Contact</h2>
-        <p>Pentru întrebări sau informații suplimentare, scrie-ne la <a href="mailto:respirofreshair@gmail.com">respirofreshair@gmail.com</a>. Suntem aici pentru tine!</p>
+        <p>Dacă ai întrebări, ne poți contacta la <a href="mailto:respirofreshair@gmail.com">respirofreshair@gmail.com</a>.</p>
     </section>
+
+   <h2>Politica de Confidențialitate</h2>
+    <p>
+        Respiro Fresh Air respectă confidențialitatea utilizatorilor săi și se angajează să protejeze informațiile acestora. Aplicația utilizează <strong>locația utilizatorului</strong> pentru a oferi informații despre calitatea aerului în zona în care se află.
+    </p>
+    <p>
+        <strong>Date colectate:</strong> Aplicația nu colectează și nu stochează date personale sau informații identificabile ale utilizatorilor. Locația utilizatorului este utilizată strict pentru a accesa datele de poluare disponibile prin serviciul <em>OpenAQ API</em>.
+    </p>
+    <p>
+        <strong>Partajarea datelor:</strong> Locația este trimisă către API-ul OpenAQ exclusiv pentru a obține date despre calitatea aerului. Nicio altă informație personală nu este partajată cu terți.
+    </p>
+    <p>
+        <strong>Consimțământ:</strong> Utilizarea locației necesită permisiunea explicită a utilizatorului. Aceasta poate fi acordată sau refuzată la lansarea aplicației.
+    </p>
+    <p>
+        <strong>Utilizare transparentă:</strong> Datele de locație sunt utilizate doar pentru a îmbunătăți funcționalitatea aplicației și pentru a oferi informații precise despre calitatea aerului. Aplicația nu folosește locația în scopuri de marketing sau analiză.
+    </p>
+    <p>
+        Dacă aveți întrebări sau îngrijorări cu privire la confidențialitatea datelor, ne puteți contacta la 
+        <a href="mailto:respirofreshair@gmail.com">respirofreshair@gmail.com</a>.
+    </p>
+</section>
+
 
     <footer>
-        <p>&copy; 2024 Respiro Fresh Air. Toate drepturile rezervate. © By Tati La Cratita</p>
+        <p>&copy; 2024 Respiro Fresh Air. Toate drepturile rezervate. Creat de Tati La Cratita.</p>
     </footer>
-
-    <script src="js/script.js"></script>
 </body>
 </html>
