@@ -1,10 +1,10 @@
-# Respiro Fresh Air 🌬️
+# Respiro 🌬️
 
 ![Respiro Fresh Air](img/app.jpg)
 
 ## Despre Proiect
 
-**Respiro Fresh Air** este o aplicație esențială pentru monitorizarea calității aerului din zona ta. Cu o interfață simplă și intuitivă, aplicația te ajută să iei decizii informate pentru a-ți proteja sănătatea, oferindu-ți informații în timp real despre nivelurile de poluare.
+**Respiro** este o aplicație esențială pentru monitorizarea calității aerului din zona ta. Cu o interfață simplă și intuitivă, aplicația te ajută să iei decizii informate pentru a-ți proteja sănătatea, oferindu-ți informații în timp real despre nivelurile de poluare.
 
 ## Caracteristici
 
@@ -44,13 +44,13 @@ Pentru mai multe informații sau întrebări, nu ezita să ne contactezi la [res
 
 2. **Navighează pe pagina la tab-ul Aplicația Noastră:**
     ```sh
-    Mergi la "Descarca acum APK"
+    Mergi la "Descarca din Google Play"
     ```
 
 3. **Instalează aplicația pe telefonul tău :**
     ```sh
-    Notă: Pentru a instala această aplicație, este posibil să fie nevoie să permiți instalarea aplicațiilor din surse necunoscute.
-    Mergi la Setări > Securitate pe dispozitivul tău și activează opțiunea Surse Necunoscute.
+    Notă: Aplicația Respiro Fresh Air este acum în testare conform noii politici Google Play. Până când va fi disponibilă oficial în Magazinul Play, o poți descărca direct din linkul de pe site ,
+    acceptand calitatea de tester.
     ```
 
 ## Contribuie
