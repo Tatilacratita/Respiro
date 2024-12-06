@@ -1,4 +1,4 @@
-/* Reset CSS */
+/* Reset CSS */ 
 * {
     margin: 0;
     padding: 0;
@@ -31,7 +31,7 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
-    background-color:  #1a1a1a; /* Fundal pentru meniu */
+    background-color: #1a1a1a; /* Fundal pentru meniu */
 }
 
 nav ul li {
@@ -100,7 +100,7 @@ footer {
     width: 100%;
 }
 
-/* Butoane */
+/* Butoane individuale */
 button.download-button, a.download-button {
     background-color: #4CAF50;
     color: white;
@@ -110,7 +110,7 @@ button.download-button, a.download-button {
     font-size: 1em;
     cursor: pointer;
     display: inline-block;
-    margin: 1em 0;
+    margin: 1em 0; /* Margină separată între butoane */
     border-radius: 5px;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
@@ -118,6 +118,19 @@ button.download-button, a.download-button {
 button.download-button:hover, a.download-button:hover {
     background-color: #45a049;
     transform: scale(1.1); /* Mărire pe hover */
+}
+
+/* Secțiune cu butoane individuale */
+section.buttons-section {
+    background-color: #1a1a1a; /* Fundal gri pentru secțiunea cu butoane */
+    padding: 2em 0; /* Adăugăm padding pentru a separa butoanele */
+    text-align: center;
+}
+
+section.buttons-section button,
+section.buttons-section a {
+    display: inline-block; /* Asigurăm că butoanele sunt afișate unul sub altul */
+    margin: 1em; /* Spațiu între fiecare buton */
 }
 
 /* Efecte pe secțiuni */
