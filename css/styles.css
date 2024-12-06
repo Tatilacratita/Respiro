@@ -5,14 +5,17 @@
     box-sizing: border-box;
 }
 
+/* Stiluri generale */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000; /* Fundal negru pentru margini */
+    background-color: #121212; /* Fundal gri închis */
     color: #fff;
+    line-height: 1.6;
 }
 
+/* Header */
 header {
     background-color: #4CAF50;
     color: white;
@@ -21,13 +24,14 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Umbră subtire */
 }
 
+/* Navigație */
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
     display: flex;
     justify-content: center;
     background-color: #333; /* Fundal pentru meniu */
-    margin: 0;
 }
 
 nav ul li {
@@ -48,11 +52,12 @@ nav ul li a:hover {
     transform: scale(1.1); /* Efect de mărire */
 }
 
+/* Secțiuni */
 section {
     padding: 2em;
     text-align: center;
     background-color: #1a1a1a; /* Fundal gri închis */
-    margin: 1em 0;
+    margin: 1em 2em;
     border-radius: 10px;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Umbre pentru secțiuni */
 }
@@ -70,6 +75,7 @@ p, ul, li {
     color: #ddd;
 }
 
+/* Imagini */
 img {
     width: 80%;
     max-width: 600px;
@@ -84,6 +90,7 @@ img:hover {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
 }
 
+/* Footer */
 footer {
     background-color: #4CAF50;
     color: white;
@@ -93,6 +100,7 @@ footer {
     width: 100%;
 }
 
+/* Butoane */
 button.download-button, a.download-button {
     background-color: #4CAF50;
     color: white;
@@ -112,13 +120,13 @@ button.download-button:hover, a.download-button:hover {
     transform: scale(1.1); /* Mărire pe hover */
 }
 
-/* Adăugare efect la secțiuni */
+/* Efecte pe secțiuni */
 section:hover {
     transform: translateY(-5px); /* Urcare ușoară */
     transition: transform 0.3s ease;
 }
 
-/* Responsive adjustments */
+/* Responsivitate */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -131,6 +139,7 @@ section:hover {
 
     section {
         padding: 1em;
+        margin: 1em;
     }
 
     img {
