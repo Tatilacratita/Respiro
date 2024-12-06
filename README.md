@@ -49,8 +49,8 @@ Pentru mai multe informații sau întrebări, nu ezita să ne contactezi la [res
 
 3. **Instalează aplicația pe telefonul tău :**
     ```sh
-    Notă: Aplicația Respiro Fresh Air este acum în testare conform noii politici Google Play. Până când va fi disponibilă oficial în Magazinul Play, o poți descărca direct din linkul de pe site ,
-    acceptand calitatea de tester.
+    Notă: Aplicația Respiro Fresh Air este acum în testare conform noii politici Google Play. Până când va fi disponibilă oficial
+    în Magazinul Play, o poți descărca direct din linkul de pe site ,acceptând calitatea de tester.
     ```
 
 ## Contribuie
