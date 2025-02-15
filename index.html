@@ -36,7 +36,107 @@
             </ul>
         </nav>
     </header>
+ <!-- Script pentru widget-urile multiple -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Lista orașelor
+            var cities = ["london", "newyork", "seoul", "guangzhou", "tokyo", "shanghai", "paris", "hongkong"];
 
+            // Configurația widget-urilor
+            var aqiWidgetConfig = [];
+            cities.forEach(function(city) {
+                aqiWidgetConfig.push({ city: city, callback: displayCity });
+            });
+
+            // Încarcă widget-urile
+            _aqiFeed(aqiWidgetConfig);
+
+            // Funcția pentru afișarea datelor
+            function displayCity(aqi) {
+                var cityData = aqi.text("<center>%cityname<br>%aqi<br><small>%date</small></center>");
+                var cityWidget = document.createElement("div");
+                cityWidget.className = "city-widget";
+                cityWidget.innerHTML = cityData;
+                document.getElementById("mutiple-city-aqi").appendChild(cityWidget);
+            }
+
+            // Smooth scroll și alte funcționalități existente
+            const links = document.querySelectorAll("nav ul li a");
+            for (const link of links) {
+                link.addEventListener("click", smoothScroll);
+            }
+
+            function smoothScroll(event) {
+                event.preventDefault();
+                const targetId = event.currentTarget.getAttribute("href").substring(1);
+                const targetSection = document.getElementById(targetId);
+
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop,
+                        behavior: "smooth",
+                    });
+
+                    // Evidențiază secțiunea activă
+                    highlightActiveSection(targetId);
+                }
+            }
+
+            function highlightActiveSection(id) {
+                const sections = document.querySelectorAll("section");
+                sections.forEach((section) => section.classList.remove("active"));
+
+                const activeSection = document.getElementById(id);
+                if (activeSection) {
+                    activeSection.classList.add("active");
+                }
+            }
+
+            // Remove pop-up message on download link
+            const downloadLink = document.querySelector("section#app a.download-button");
+            if (downloadLink) {
+                downloadLink.addEventListener("click", function (event) {
+                    // Do nothing, let the download happen
+                });
+            }
+
+            // Adăugare animație la hover pentru butoane
+            const buttons = document.querySelectorAll("button.download-button, a.download-button");
+            buttons.forEach((button) => {
+                button.addEventListener("mouseenter", function () {
+                    button.style.transform = "scale(1.1)";
+                });
+                button.addEventListener("mouseleave", function () {
+                    button.style.transform = "scale(1)";
+                });
+            });
+
+            // Evidențiere automată a secțiunii în funcție de scroll
+            window.addEventListener("scroll", function () {
+                const sections = document.querySelectorAll("section");
+                let currentSectionId = "";
+
+                sections.forEach((section) => {
+                    const sectionTop = section.offsetTop - 50; // Ajustare pentru marginea superioară
+                    const sectionHeight = section.offsetHeight;
+
+                    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                        currentSectionId = section.getAttribute("id");
+                    }
+                });
+
+                // Actualizează link-ul activ din meniu
+                links.forEach((link) => {
+                    link.classList.remove("active-link");
+                    if (link.getAttribute("href").substring(1) === currentSectionId) {
+                        link.classList.add("active-link");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
     <section id="about">
         <h2>Despre Noi</h2>
         <p>Respiro este o aplicație dedicată monitorizării calității aerului în timp real. Cu ajutorul acestei aplicații, utilizatorii pot verifica nivelurile de poluare din zona în care se află și pot primi sfaturi pentru a-și proteja sănătatea.</p>
