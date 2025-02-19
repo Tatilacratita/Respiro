@@ -33,6 +33,25 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // Remove pop-up message on download link
+    const downloadLink = document.querySelector("section#app a.download-button");
+    if (downloadLink) {
+        downloadLink.addEventListener("click", function (event) {
+            // Do nothing, let the download happen
+        });
+    }
+
+    // Adăugare animație la hover pentru butoane
+    const buttons = document.querySelectorAll("button.download-button, a.download-button");
+    buttons.forEach((button) => {
+        button.addEventListener("mouseenter", function () {
+            button.style.transform = "scale(1.1)";
+        });
+        button.addEventListener("mouseleave", function () {
+            button.style.transform = "scale(1)";
+        });
+    });
+
     // Evidențiere automată a secțiunii în funcție de scroll
     window.addEventListener("scroll", function () {
         const sections = document.querySelectorAll("section");
