@@ -1,0 +1,125 @@
+{
+  "nav": {
+    "about": "About Us",
+    "privacy": "Privacy Policy"
+  },
+  "about": {
+    "title": "About Us",
+    "intro": "Find out the air quality in your area instantly and make better decisions for your health and that of your loved ones! With Respiro Fresh Air, you can monitor pollution levels around you in real time, directly on your phone. 🚀",
+    "features": {
+      "title": "What We Offer",
+      "items": [
+        "Instant monitoring: Check pollution levels (PM2.5, NOx, O3) wherever you are.",
+        "Helpful tips: Get notifications when the air is dangerous and suggestions to protect yourself.",
+        "Simple and intuitive: User-friendly design, ideal for anyone.",
+        "No personal data: We respect your privacy - no collection of personal information."
+      ]
+    },
+    "air_quality": {
+      "title": "Air Quality Traffic Light",
+      "description": "The values measured by collection stations are calculated in µg/m³. µg/m³ means micrograms per cubic meter.",
+      "levels": [
+        "Clean Air: < 50 µg/m³ 🌱",
+        "Acceptable Air Value: 50.01 - 100 µg/m³ 🌼",
+        "Moderate Air Value: 100.01 - 150 µg/m³ 🌧️",
+        "Polluted Air: > 150.01 - 200 µg/m³ 💔",
+        "Extremely Polluted Air: > 200.01 - 300 µg/m³ 💔",
+        "Dangerously Polluted Air: > 300 µg/m³ 💔"
+      ]
+    },
+    "pollutants": {
+      "title": "Common Pollutants",
+      "items": [
+        {
+          "title": "Fine Particles (PM10)",
+          "description": "These can penetrate deep into the lungs and cause inflammation and other respiratory problems."
+        },
+        {
+          "title": "Fine Particles (PM2.5)",
+          "description": "These can penetrate deep into the lungs and cause inflammation and other respiratory problems."
+        },
+        {
+          "title": "Nitrogen Oxides (NOx)",
+          "description": "Mainly from vehicle emissions, these can irritate airways and aggravate conditions like asthma."
+        },
+        {
+          "title": "Ground-level Ozone (O3)",
+          "description": "This can cause eye and respiratory tract irritation and can reduce lung function."
+        },
+        {
+          "title": "Carbon Monoxide (CO)",
+          "description": "This colorless and odorless gas can affect oxygen transport in the body, leading to fatigue and headaches."
+        }
+      ]
+    },
+    "download": {
+      "title": "Download Respiro Fresh Air",
+      "subtitle": "Protect Your Health with a Single Tap! 🌍🌬️",
+      "buttons": {
+        "internal": "Internal Testing",
+        "closed_android": "Closed Testing Android",
+        "closed_web": "Closed Testing Web",
+        "apk": "Download APK"
+      },
+      "instructions": {
+        "tester": "If you're already one of our testers, you can access the latest version of the application using the buttons above.",
+        "apk_notice": "If you want to download the APK file directly, you need to enable installation from unknown sources. Follow these steps:",
+        "steps": [
+          "Access Settings on your phone",
+          "Go to Security or Privacy",
+          "Enable Allow installation from unknown sources",
+          "Download the APK and open it for installation",
+          "Accept all necessary permissions"
+        ]
+      }
+    }
+  },
+  "app": {
+    "title": "Our Application",
+    "description": "The Respiro app is easy to use and essential for monitoring air quality around you. With a simple design and intuitive features, we provide accurate information to help you make the best decisions for your health and the environment.",
+    "buttons": {
+      "internal": "Internal Testing",
+      "closed_android": "Closed Testing Android",
+      "closed_web": "Closed Testing Web",
+      "apk": "Download APK"
+    },
+    "instructions": {
+      "tester": "If you're already one of our testers, you can access the latest version of the application using the buttons above.",
+      "apk_notice": "If you want to download the APK file directly, you need to enable installation from unknown sources. Follow these steps:",
+      "steps": {
+        "0": "Access Settings on your phone",
+        "1": "Go to Security or Privacy",
+        "2": "Enable Allow installation from unknown sources",
+        "3": "Download the APK and open it for installation",
+        "4": "Accept all necessary permissions"
+      }
+    },
+    "note": "After installation is complete, you will be able to use the Respiro app without any issues. 🚀"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "intro": "Respiro respects user privacy and is committed to protecting their information. The application uses the user's location to provide information about air quality in their area.",
+    "data_collected": {
+      "title": "Data Collected",
+      "content": "The application does not collect or store personal data or identifiable user information. The user's location is used strictly to access pollution data available through the OpenAQ API service."
+    },
+    "data_sharing": {
+      "title": "Data Sharing",
+      "content": "Location is sent to the Aqicn API (aqicn.org and waqi.info) exclusively to obtain air quality data. No other personal information is shared with third parties."
+    },
+    "consent": {
+      "title": "Consent",
+      "content": "Location usage requires explicit user permission. This can be granted or denied when launching the application."
+    },
+    "transparency": {
+      "title": "Transparent Usage",
+      "content": "Location data is used only to improve application functionality and provide accurate air quality information. The application does not use location for marketing or analysis purposes."
+    },
+    "contact": {
+      "content": "If you have questions or concerns about data privacy, you can contact us at respirofreshair@gmail.com"
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  }
+}
