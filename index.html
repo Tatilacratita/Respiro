@@ -1,24 +1,129 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>
-        // Verifică dacă URL-ul conține "www" și redirecționează la varianta fără "www"
-        if (window.location.hostname.startsWith("www")) {
-            const newUrl = "https://" + window.location.hostname.replace(/^www\./, "") + window.location.pathname + window.location.search;
-            window.location.replace(newUrl);
-        }
-    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Respiro - Importanța Calității Aerului</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css" />
+
     <style>
-        /* Stilizare imagine mică pentru butonul de descărcare */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f7f7f7;
+        }
+
+        header, footer {
+            background-color: #0073e6;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 960px;
+            margin: auto;
+            background-color: white;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #0073e6;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            margin: 20px auto;
+            border-radius: 8px;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .download-button {
+            display: inline-block;
+            background-color: #0073e6;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin: 10px;
+            text-decoration: none;
+        }
+
         .download-button img {
-            width: 20px; /* Dimensiune redusă pentru imagine */
-            height: auto;
+            width: 20px;
             vertical-align: middle;
             margin-right: 8px;
+        }
+
+        .buttons-section {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .info-section {
+            background-color: #eef6ff;
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 20px;
+        }
+
+        ol {
+            margin: 0 auto;
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .aqicn-widget iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            margin-top: 30px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        @media screen and (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 8px 0;
+            }
         }
     </style>
 </head>
@@ -28,110 +133,98 @@
         <nav>
             <ul>
                 <li><a href="#about">Despre Noi</a></li>
-                <li><a href="#importance">Importanța Calității Aerului</a></li>
-                <li><a href="#pollutants">Poluanți Comuni</a></li>
-                <li><a href="#app">Aplicația Noastră</a></li>
+                <li><a href="#importance">Importanță</a></li>
+                <li><a href="#pollutants">Poluanți</a></li>
+                <li><a href="#app">Aplicație</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#privacy">Politica de Confidențialitate</a></li>
+                <li><a href="#privacy">Confidențialitate</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="about">
         <h2>Despre Noi</h2>
-        <p>Respiro este o aplicație dedicată monitorizării calității aerului în timp real. Cu ajutorul acestei aplicații, utilizatorii pot verifica nivelurile de poluare din zona în care se află și pot primi sfaturi pentru a-și proteja sănătatea.</p>
+        <p>Respiro este o aplicație dedicată monitorizării calității aerului în timp real. Cu ajutorul acesteia, utilizatorii pot verifica nivelurile de poluare din zona lor și pot primi sfaturi utile pentru sănătate.</p>
         <img src="img/about.jpg" alt="Imagine despre calitatea aerului">
     </section>
 
-<section id="importance">
-    <h2>Importanța Calității Aerului</h2>
-    <p>Calitatea aerului pe care îl respirăm are un impact direct asupra sănătății noastre. Aerul poluat poate cauza diverse probleme de sănătate, inclusiv boli respiratorii, cardiovasculare și chiar cancer. De aceea, este esențial să fim conștienți de calitatea aerului și să luăm măsuri pentru a reduce expunerea la poluanți.</p>
-    <p>Valorile măsurate de stațiile de colectare sunt calculate în µg/m³. µg/m³ înseamnă micrograme pe metru cub.</p>
-    <ul>
-        <li><strong>Aer Curat:</strong> &lt; 20 µg/m³ 🌱</li>
-        <li><strong>Valoarea Aerului acceptabilă:</strong> 20.01 - 40 µg/m³ 🌼</li>
-        <li><strong>Valoare Moderată a Aerului:</strong> 40.01 - 50 µg/m³ 🌧️</li>
-        <li><strong>Aer Poluat:</strong> &gt; 50.01 - 100 µg/m³ 💔</li>
-        <li><strong>Aer Extrem de Poluat:</strong> &gt; 100.01 - 300 µg/m³ 💔</li>
-    </ul>
-    <p>O serie de efecte negative asupra sănătății au fost asociate cu expunerea atât la PM2.5, cât și la PM10. Pentru PM2.5, expunerile de scurtă durată (până la 24 de ore) au fost asociate cu mortalitate prematură, spitalizări crescute pentru cauze cardiace sau pulmonare, bronșită acută și cronică, atacuri de astm, vizite la urgențe, simptome respiratorii și restricții, zile de inactivitate. Aceste efecte adverse asupra sănătății au fost raportate în principal la sugari, copii și adulți în vârstă cu boli cardiace sau pulmonare preexistente. În plus, dintre toți poluanții atmosferici obișnuiți, PM2.5 este asociat cu cea mai mare proporție de efecte adverse asupra sănătății legate de poluarea aerului, atât în ​​Statele Unite, cât și în întreaga lume, conform Organizației Mondiale a Sănătății.</p>
-    <p>Expunerea pe termen scurt la PM10 a fost asociată în primul rând cu agravarea bolilor respiratorii, inclusiv astmul și boala pulmonară obstructivă cronică (BPOC), ducând la spitalizare și vizite la departamentul de urgență.</p>
-    <p>Expunerea pe termen lung (de la luni, la ani) la PM2.5 a fost legată de moartea prematură, în special la persoanele care au boli cronice de inimă sau plămâni, și creșterea redusă a funcției pulmonare la copii. Efectele expunerii pe termen lung la PM10 sunt mai puțin clare, deși mai multe studii sugerează o legătură între expunerea pe termen lung la PM10 și mortalitatea respiratorie.</p>
+    <section id="importance">
+        <h2>Importanța Calității Aerului</h2>
+        <p>Calitatea aerului influențează direct sănătatea noastră. Aerul poluat poate provoca afecțiuni respiratorii, cardiovasculare și chiar cancer. Este esențial să monitorizăm calitatea aerului și să reducem expunerea la poluanți.</p>
+        <p>Valorile măsurate sunt în µg/m³ (micrograme pe metru cub):</p>
+        <ul>
+            <li><strong>Aer Curat:</strong> &lt; 20 µg/m³ 🌱</li>
+            <li><strong>Aer Acceptabil:</strong> 20.01 - 40 µg/m³ 🌼</li>
+            <li><strong>Aer Moderat:</strong> 40.01 - 50 µg/m³ 🌧️</li>
+            <li><strong>Aer Poluat:</strong> 50.01 - 100 µg/m³ 💔</li>
+            <li><strong>Aer Extrem de Poluat:</strong> 100.01 - 300 µg/m³ 💔</li>
+        </ul>
+        <p><strong>Efecte ale PM2.5 și PM10:</strong> PM2.5 este asociat cu mortalitate prematură, bronșită, astm, spitalizări, afectând în special sugarii, copiii și vârstnicii cu boli cardiace/pulmonare. PM10 este corelat cu agravarea BPOC și astm. Expunerea pe termen lung la PM2.5 duce la moarte prematură și afectarea funcției pulmonare la copii. Studiile sugerează o legătură și între PM10 și mortalitatea respiratorie.</p>
         <img src="img/importance.jpg" alt="Importanța calității aerului">
     </section>
 
     <section id="pollutants">
         <h2>Poluanți Comuni</h2>
         <ul>
-            <li><strong>Particulele fine (PM10):</strong> Acestea pot pătrunde adânc în plămâni și pot cauza inflamații și alte probleme respiratorii.</li>
-            <li><strong>Particulele fine (PM2.5):</strong> Acestea pot pătrunde adânc în plămâni și pot cauza inflamații și alte probleme respiratorii.</li>
-            <li><strong>Oxizii de azot (NOx):</strong> Proveniți în principal din emisiile vehiculelor, aceștia pot irita căile respiratorii și pot agrava afecțiuni precum astmul.</li>
-            <li><strong>Ozonul la nivelul solului (O3):</strong> Acesta poate cauza iritații ale ochilor și ale căilor respiratorii și poate reduce funcția pulmonară.</li>
-            <li><strong>Monoxidul de carbon (CO):</strong> Acest gaz incolor și inodor poate afecta transportul oxigenului în organism, ducând la simptome de oboseală și dureri de cap.</li>
+            <li><strong>PM10:</strong> Particule mari ce afectează căile respiratorii.</li>
+            <li><strong>PM2.5:</strong> Particule fine ce pătrund adânc în plămâni.</li>
+            <li><strong>NOx:</strong> Oxizi de azot ce irită căile respiratorii.</li>
+            <li><strong>O3:</strong> Ozon de la nivelul solului, afectează ochii și respirația.</li>
+            <li><strong>CO:</strong> Monoxid de carbon ce reduce oxigenarea sângelui.</li>
         </ul>
         <img src="img/pollutants.jpg" alt="Poluanți comuni">
     </section>
 
     <section id="app">
         <h2>Aplicația Noastră</h2>
-        <p>Aplicația Respiro este ușor de utilizat și esențială pentru monitorizarea calității aerului din jurul tău. Cu un design simplu și funcții intuitive, îți oferim informații precise pentru a lua cele mai bune decizii privind sănătatea ta și mediul înconjurător.</p>
+        <p>Respiro este intuitivă și oferă date precise privind aerul din jurul tău. Ideală pentru decizii rapide privind sănătatea personală.</p>
 
         <div class="buttons-section">
             <a href="https://play.google.com/store/apps/details?id=com.tatilacratita.respiro" class="download-button" target="_blank">
-                <img src="img/google.jpg" alt="Icon Google"> GooglePlay Test
+                <img src="img/google.jpg" alt="Google Play"> Google Play
             </a>
-           <a href="https://github.com/Tatilacratita/Respiro/raw/main/downloads/Respiro_2.0_release.apk"  class="download-button" download="Respiro_1.8_release.apk"> <img src="img/google.jpg" alt="Icon Download"> Descarcă APK
-    </a>
+            <a href="https://github.com/Tatilacratita/Respiro/raw/main/downloads/Respiro_2.0_release.apk" class="download-button" download>
+                <img src="img/google.jpg" alt="APK"> Descarcă APK
+            </a>
         </div>
 
         <div class="info-section">
-            <p>🔹 Dacă ești deja unul dintre testerii noștri, poți accesa ultima versiune a aplicației folosind butoanele de mai sus.</p>
-            <p>🔹 Dacă vrei să descarci direct fișierul APK, trebuie să activezi instalarea din surse necunoscute. Urmează acești pași:</p>
-            <ol style="list-style-position: inside; padding-left: 0; text-align: center; display: inline-block;">
-                <li>Accesează <strong>Setări</strong> pe telefonul tău.</li>
-                <li>Mergi la <strong>Securitate</strong> sau <strong>Confidențialitate</strong>.</li>
-                <li>Activează opțiunea <strong>Permite instalarea aplicațiilor din surse necunoscute</strong>.</li>
-                <li>Descarcă APK-ul și deschide-l pentru instalare.</li>
-                <li>Acceptă toate permisiunile necesare.</li>
+            <p>🔹 Poți descărca ultima versiune din Google Play sau direct APK.</p>
+            <p>🔹 Pentru instalare din surse externe:</p>
+            <ol>
+                <li>Intră în <strong>Setări</strong></li>
+                <li>Accesează <strong>Securitate</strong> / <strong>Confidențialitate</strong></li>
+                <li>Activează <strong>Instalare din surse necunoscute</strong></li>
+                <li>Descarcă și instalează APK-ul</li>
             </ol>
-            <p>După finalizarea instalării, vei putea utiliza aplicația Respiro fără probleme. 🚀</p>
         </div>
 
         <p style="text-align: center; font-weight: bold;">
-            Știi că te protejezi cu Respiro🌼🌼🌼? Verifică acum calitatea aerului din zona ta și ia măsuri pentru un viitor mai curat și mai sănătos!
+            Protejează-te cu Respiro 🌼 Verifică calitatea aerului din zona ta acum!
         </p>
 
         <div class="aqicn-widget">
-            <iframe src="https://aqicn.org/here/widget/?token=9ca5ec86e10df6fe740e29811f4530ec9de31781&lang=ro" frameborder="0"></iframe>
+            <iframe src="https://aqicn.org/here/widget/?token=9ca5ec86e10df6fe740e29811f4530ec9de31781&lang=ro"></iframe>
         </div>
 
-        <p style="text-align: center; font-size: 14px; color: #555; margin-top: 10px;">
-            📌 Datele privind calitatea aerului afișate pe site-ul și în aplicația Respiro sunt furnizate de 
-            <a href="https://aqicn.org/" target="_blank" style="color: #0073e6; text-decoration: none; font-weight: bold;">
-                World Air Quality Index (AQICN)
-            </a>. 
-            Ne bazăm pe surse de încredere pentru a-ți oferi informații precise și actualizate despre aerul pe care îl respiri. 🌍
+        <p style="text-align: center; font-size: 14px; color: #555;">
+            📌 Date furnizate de <a href="https://aqicn.org/" target="_blank">World Air Quality Index</a>
         </p>
     </section>
 
     <section id="contact">
         <h2>Contact</h2>
-        <p>Pentru mai multe informații, nu ezita să ne contactezi la <a href="mailto:respirofreshair@gmail.com">respirofreshair@gmail.com</a>.</p>
+        <p>Scrie-ne la: <a href="mailto:respirofreshair@gmail.com">respirofreshair@gmail.com</a></p>
     </section>
+
     <section id="privacy">
         <h2>Politica de Confidențialitate</h2>
-        <p>Respiro respectă confidențialitatea utilizatorilor săi și se angajează să protejeze informațiile acestora. Aplicația utilizează <strong>locația utilizatorului</strong> pentru a oferi informații despre calitatea aerului în zona în care se află.</p>
-        <p><strong>Date colectate:</strong> Aplicația nu colectează și nu stochează date personale sau informații identificabile ale utilizatorilor. Locația utilizatorului este utilizată strict pentru a accesa datele de poluare disponibile prin serviciul <em>OpenAQ API</em>.</p>
-        <p><strong>Partajarea datelor:</strong> Locația este trimisă către API-ul Aqicn (<a href="https://aqicn.org" target="_blank">aqicn.org</a> și <a href="https://waqi.info" target="_blank">waqi.info</a>) exclusiv pentru a obține date despre calitatea aerului.</p> Nicio altă informație personală nu este partajată cu terți.</p>
-        <p><strong>Consimțământ:</strong> Utilizarea locației necesită permisiunea explicită a utilizatorului. Aceasta poate fi acordată sau refuzată la lansarea aplicației.</p>
-        <p><strong>Utilizare transparentă:</strong> Datele de locație sunt utilizate doar pentru a îmbunătăți funcționalitatea aplicației și pentru a oferi informații precise despre calitatea aerului. Aplicația nu folosește locația în scopuri de marketing sau analiză.</p>
-        <p>Dacă aveți întrebări sau îngrijorări cu privire la confidențialitatea datelor, ne puteți contacta la <a href="mailto:respirofreshair@gmail.com">respirofreshair@gmail.com</a>.</p>
+        <p>Respiro respectă confidențialitatea ta. Nu colectăm date personale. Locația este folosită doar pentru afișarea datelor de calitate a aerului via OpenAQ.</p>
+        <p>Permisiunea este cerută explicit. Nu folosim datele în scopuri comerciale.</p>
     </section>
 
     <footer>
-        <p>&copy; 2024 Respiro. Toate drepturile rezervate. © By Tati La Cratita</p>
+        <p>&copy; 2024 Respiro. Toate drepturile rezervate. By Tati La Cratita</p>
     </footer>
-
-    <script src="js/script.js"></script>
 </body>
 </html>
