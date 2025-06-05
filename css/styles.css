@@ -21,7 +21,7 @@ header {
     color: white;
     text-align: center;
     padding: 1em 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Umbră subtire */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 /* Navigație */
@@ -31,7 +31,7 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
-    background-color: #121212; /* Fundal pentru meniu */
+    background-color: #121212;
 }
 
 nav ul li {
@@ -49,21 +49,21 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #4CAF50;
     border-radius: 5px;
-    transform: scale(1.1); /* Efect de mărire */
+    transform: scale(1.1);
 }
 
 /* Secțiuni */
 section {
     padding: 2em;
     text-align: center;
-    background-color: #1a1a1a; /* Fundal gri închis */
+    background-color: #1a1a1a;
     margin: 1em 2em;
     border-radius: 10px;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Umbre pentru secțiuni */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
 
 section:nth-child(even) {
-    background-color: #262626; /* Fundal alternativ */
+    background-color: #262626;
 }
 
 h2 {
@@ -86,7 +86,7 @@ img {
 }
 
 img:hover {
-    transform: scale(1.05); /* Efect zoom */
+    transform: scale(1.05);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
 }
 
@@ -100,7 +100,7 @@ footer {
     width: 100%;
 }
 
-/* Butoane individuale */
+/* Butoane */
 button.download-button, a.download-button {
     background-color: #4CAF50;
     color: white;
@@ -110,32 +110,32 @@ button.download-button, a.download-button {
     font-size: 1em;
     cursor: pointer;
     display: inline-block;
-    margin: 1em 0; /* Margină separată între butoane */
+    margin: 1em 0;
     border-radius: 5px;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button.download-button:hover, a.download-button:hover {
     background-color: #45a049;
-    transform: scale(1.1); /* Mărire pe hover */
+    transform: scale(1.1);
 }
 
-/* Secțiune cu butoane individuale */
+/* Secțiune cu butoane */
 section.buttons-section {
-    background-color: #1a1a1a; /* Fundal gri pentru secțiunea cu butoane */
-    padding: 2em 0; /* Adăugăm padding pentru a separa butoanele */
+    background-color: #1a1a1a;
+    padding: 2em 0;
     text-align: center;
 }
 
 section.buttons-section button,
 section.buttons-section a {
-    display: inline-block; /* Asigurăm că butoanele sunt afișate unul sub altul */
-    margin: 1em; /* Spațiu între fiecare buton */
+    display: inline-block;
+    margin: 1em;
 }
 
 /* Efecte pe secțiuni */
 section:hover {
-    transform: translateY(-5px); /* Urcare ușoară */
+    transform: translateY(-5px);
     transition: transform 0.3s ease;
 }
 
@@ -163,7 +163,7 @@ section:hover {
 
 /* Stilizare imagine mică pentru butonul de descărcare */
 .download-button img {
-    width: 20px; /* Dimensiune redusă pentru imagine */
+    width: 20px;
     height: auto;
     vertical-align: middle;
     margin-right: 8px;
@@ -225,9 +225,16 @@ section:hover {
 
     .city-widget {
         width: 100%;
-        .diamond-list {
+    }
+}
+
+/* ✅ LISTĂ CU ROMBURI COLORATE */
+.diamond-list {
     list-style: none;
     padding-left: 0;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 600px;
 }
 
 .diamond-list li {
@@ -237,13 +244,18 @@ section:hover {
     line-height: 1.6;
 }
 
+/* Romb standard */
 .diamond-list li::before {
-    content: "♦"; /* simbol romb */
+    content: "♦";
     position: absolute;
     left: 0;
     top: 0.2em;
-    color: #0073e6; /* poți schimba culoarea */
     font-size: 1em;
-
-    }
 }
+
+/* Culori pe niveluri */
+.diamond-list li:nth-child(1)::before { color: #00cc66; }   /* Verde */
+.diamond-list li:nth-child(2)::before { color: #ccdd00; }   /* Galben */
+.diamond-list li:nth-child(3)::before { color: #ff9900; }   /* Portocaliu */
+.diamond-list li:nth-child(4)::before { color: #ff3333; }   /* Roșu */
+.diamond-list li:nth-child(5)::before { color: #990000; }   /* Vișiniu */
