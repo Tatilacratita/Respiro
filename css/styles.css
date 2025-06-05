@@ -225,5 +225,25 @@ section:hover {
 
     .city-widget {
         width: 100%;
+        .diamond-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.diamond-list li {
+    position: relative;
+    padding-left: 1.5em;
+    margin-bottom: 0.5em;
+    line-height: 1.6;
+}
+
+.diamond-list li::before {
+    content: "♦"; /* simbol romb */
+    position: absolute;
+    left: 0;
+    top: 0.2em;
+    color: #0073e6; /* poți schimba culoarea */
+    font-size: 1em;
+
     }
 }
