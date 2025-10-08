@@ -1,141 +1,168 @@
 <!DOCTYPE html>
-<html lang="ro">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>
-        // Verifică dacă URL-ul conține "www" și redirecționează la varianta fără "www"
-        if (window.location.hostname.startsWith("www")) {
-            const newUrl = "https://" + window.location.hostname.replace(/^www\./, "") + window.location.pathname + window.location.search;
-            window.location.replace(newUrl);
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Respiro - Air Quality Monitoring</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1dc962",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#112117",
+                        "content-light": "#111714",
+                        "content-dark": "#e8ebe9",
+                        "subtle-light": "#648772",
+                        "subtle-dark": "#a0b8ac",
+                        "border-light": "#dce5df",
+                        "border-dark": "#2a3f33"
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
         }
     </script>
-    <title>Respiro - Importanța Calității Aerului</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <style>
-        /* Stilizare imagine mică pentru butonul de descărcare */
-        .download-button img {
-            width: 20px; /* Dimensiune redusă pentru imagine */
-            height: auto;
-            vertical-align: middle;
-            margin-right: 8px;
+<style>
+        .icon-primary {
+            color: #1dc962;
         }
     </style>
 </head>
-<body>
-    <header>
-        <h1>Respiro</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">Despre Noi</a></li>
-                <li><a href="#importance">Importanța Calității Aerului</a></li>
-                <li><a href="#pollutants">Poluanți Comuni</a></li>
-                <li><a href="#app">Aplicația Noastră</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#privacy">Politica de Confidențialitate</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="bg-background-light dark:bg-background-dark font-display text-content-light dark:text-content-dark">
+<div class="relative flex min-h-screen w-full flex-col">
+<header class="sticky top-0 z-10 w-full border-b border-border-light dark:border-border-dark bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="container mx-auto flex items-center justify-between whitespace-nowrap px-4 sm:px-6 lg:px-8 py-4">
+<div class="flex items-center gap-3">
+<svg class="h-8 w-8 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h2 class="text-xl font-bold">Respiro</h2>
+</div>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">About Us</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Air Quality</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Pollutants</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Our App</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-background-dark font-bold text-sm px-5 py-2.5 rounded-lg hover:bg-primary/90 transition-colors">
+                        Download App
+                    </button>
+<button class="lg:hidden p-2">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1">
+<section class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+<div class="relative rounded-xl overflow-hidden min-h-[500px] flex items-center justify-center text-center p-8 bg-cover bg-center" style='background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDEOphQybgQLFZDJHd7o0LXoKjz0z5eZAfeylf60G8EqkvlShmsaoF5NOY83OoeKkQ_NH9aZpJlV-OryPkP5crQs6DfDlgvAzBbLXiuOgOWbp3K3uSYOruU718Gf21ElRVkTsJozfWJN6YffyRSoNOt1AwvLTUSEBEnfd9zei3o6MEQnb9PP2FefJhZ7aJhRgVnVVcktRddpVdTAzgIlghNFQu4NO0LLvE-mqpTFMqvLfFQNHtCwv7X66LlcT99iVKogZMZIoS-eo4R");'>
+<div class="z-10 flex flex-col items-center gap-6 max-w-3xl">
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tighter">Breathe Easier with Respiro</h1>
+<p class="text-lg sm:text-xl text-white/90">Monitor air quality in your area and take control of your health.</p>
+<button class="bg-primary text-background-dark font-bold text-base px-8 py-3 rounded-lg hover:bg-primary/90 transition-transform transform hover:scale-105">
+                            Download the App
+                        </button>
+</div>
+</div>
+</section>
+<section class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24" id="about">
+<div class="max-w-4xl mx-auto text-center">
+<h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-4">About Us</h2>
+<p class="text-lg text-subtle-light dark:text-subtle-dark">At Respiro, we are dedicated to providing accurate and real-time air quality information to help you make informed decisions about your health and well-being. Our team of environmental scientists and technology experts work tirelessly to ensure our data is reliable and accessible.</p>
+</div>
+</section>
+<section class="bg-background-light dark:bg-background-dark py-16 sm:py-24" id="importance">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-4xl mx-auto text-center mb-12">
+<h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-4">The Importance of Air Quality</h2>
+<p class="text-lg text-subtle-light dark:text-subtle-dark">Air quality significantly impacts our health. High levels of pollutants can lead to respiratory issues, cardiovascular diseases, and other health problems. Monitoring air quality helps us understand the risks and take necessary precautions.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+<div class="bg-white dark:bg-background-dark/50 border border-border-light dark:border-border-dark rounded-lg p-6 text-center shadow-sm">
+<p class="text-lg font-medium mb-2">PM2.5</p>
+<p class="text-4xl font-bold text-primary">35 <span class="text-xl font-medium text-subtle-light dark:text-subtle-dark">μg/m³</span></p>
+</div>
+<div class="bg-white dark:bg-background-dark/50 border border-border-light dark:border-border-dark rounded-lg p-6 text-center shadow-sm">
+<p class="text-lg font-medium mb-2">PM10</p>
+<p class="text-4xl font-bold text-primary">60 <span class="text-xl font-medium text-subtle-light dark:text-subtle-dark">μg/m³</span></p>
+</div>
+<div class="bg-white dark:bg-background-dark/50 border border-border-light dark:border-border-dark rounded-lg p-6 text-center shadow-sm">
+<p class="text-lg font-medium mb-2">Ozone (O₃)</p>
+<p class="text-4xl font-bold text-primary">40 <span class="text-xl font-medium text-subtle-light dark:text-subtle-dark">ppb</span></p>
+</div>
+</div>
+<p class="max-w-4xl mx-auto text-center mt-8 text-subtle-light dark:text-subtle-dark">These pollutants, including particulate matter (PM2.5 and PM10) and ozone, are major contributors to air pollution. Elevated levels can cause immediate and long-term health effects, especially for vulnerable populations like children and the elderly.</p>
+</div>
+</section>
+<section class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24" id="pollutants">
+<div class="max-w-4xl mx-auto text-center mb-12">
+<h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-4">Common Pollutants</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-background-light dark:bg-background-dark/50 border border-border-light dark:border-border-dark rounded-lg p-6 flex flex-col gap-4">
+<div class="flex items-center gap-4">
+<div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-lg"><svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"><path d="M120,200H72a8,8,0,0,1,0-16h48a8,8,0,0,1,0,16Zm64-16H160a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Zm-24,32H104a8,8,0,0,0,0,16h56a8,8,0,0,0,0-16ZM232,92a76.08,76.08,0,0,1-76,76H76A52,52,0,0,1,76,64a53.26,53.26,0,0,1,8.92.76A76.08,76.08,0,0,1,232,92Zm-16,0A60.06,60.06,0,0,0,96,88.46a8,8,0,0,1-16-.92q.21-3.66.77-7.23A38.11,38.11,0,0,0,76,80a36,36,0,0,0,0,72h80A60.07,60.07,0,0,0,216,92Z"></path></svg></div>
+<h3 class="text-lg font-bold">Particulate Matter (PM)</h3>
+</div>
+<p class="text-subtle-light dark:text-subtle-dark">Tiny particles that can penetrate deep into the lungs, causing respiratory and cardiovascular problems.</p>
+</div>
+<div class="bg-background-light dark:bg-background-dark/50 border border-border-light dark:border-border-dark rounded-lg p-6 flex flex-col gap-4">
+<div class="flex items-center gap-4">
+<div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-lg"><svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"><path d="M120,200H72a8,8,0,0,1,0-16h48a8,8,0,0,1,0,16Zm64-16H160a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Zm-24,32H104a8,8,0,0,0,0,16h56a8,8,0,0,0,0-16ZM232,92a76.08,76.08,0,0,1-76,76H76A52,52,0,0,1,76,64a53.26,53.26,0,0,1,8.92.76A76.08,76.08,0,0,1,232,92Zm-16,0A60.06,60.06,0,0,0,96,88.46a8,8,0,0,1-16-.92q.21-3.66.77-7.23A38.11,38.11,0,0,0,76,80a36,36,0,0,0,0,72h80A60.07,60.07,0,0,0,216,92Z"></path></svg></div>
+<h3 class="text-lg font-bold">Nitrogen Dioxide (NO₂)</h3>
+</div>
+<p class="text-subtle-light dark:text-subtle-dark">A gas primarily from vehicle emissions that can irritate the respiratory system and worsen asthma.</p>
+</div>
+<div class="bg-background-light dark:bg-background-dark/50 border border-border-light dark:border-border-dark rounded-lg p-6 flex flex-col gap-4">
+<div class="flex items-center gap-4">
+<div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-lg"><svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"><path d="M120,200H72a8,8,0,0,1,0-16h48a8,8,0,0,1,0,16Zm64-16H160a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Zm-24,32H104a8,8,0,0,0,0,16h56a8,8,0,0,0,0-16ZM232,92a76.08,76.08,0,0,1-76,76H76A52,52,0,0,1,76,64a53.26,53.26,0,0,1,8.92.76A76.08,76.08,0,0,1,232,92Zm-16,0A60.06,60.06,0,0,0,96,88.46a8,8,0,0,1-16-.92q.21-3.66.77-7.23A38.11,38.11,0,0,0,76,80a36,36,0,0,0,0,72h80A60.07,60.07,0,0,0,216,92Z"></path></svg></div>
+<h3 class="text-lg font-bold">Sulfur Dioxide (SO₂)</h3>
+</div>
+<p class="text-subtle-light dark:text-subtle-dark">A gas from burning fossil fuels that can harm the respiratory system and make breathing difficult.</p>
+</div>
+</div>
+</section>
+<section class="bg-primary/10 dark:bg-primary/20 py-16 sm:py-24" id="app">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-4">Get the Respiro App</h2>
+<p class="text-lg text-subtle-light dark:text-subtle-dark max-w-2xl mx-auto mb-8">Download the Respiro app to monitor air quality in real-time, receive alerts, and get personalized recommendations for staying safe. Available on both iOS and Android.</p>
+<div class="flex flex-wrap justify-center gap-4">
+<button class="bg-primary text-background-dark font-bold text-base px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors">Download for iOS</button>
+<button class="bg-white dark:bg-background-dark text-content-light dark:text-content-dark font-bold text-base px-6 py-3 rounded-lg border border-border-light dark:border-border-dark hover:bg-background-light/50 dark:hover:bg-background-dark/50 transition-colors">Download for Android</button>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-background-light dark:bg-background-dark border-t border-border-light dark:border-border-dark">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="text-center md:text-left">
+<p class="text-sm">For questions or support, please contact us at:</p>
+<a class="font-medium text-primary hover:underline" href="mailto:support@respiro.com">support@respiro.com</a> or <a class="font-medium text-primary hover:underline" href="tel:555-123-4567">(555) 123-4567</a>
+</div>
+<div class="text-center text-sm text-subtle-light dark:text-subtle-dark">
+<span>© 2024 Respiro. All rights reserved.</span>
+<a class="ml-4 hover:text-primary underline" href="#">Privacy Policy</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
 
-    <section id="about">
-        <h2>Despre Noi</h2>
-        <p>Respiro este o aplicație dedicată monitorizării calității aerului în timp real. Cu ajutorul acestei aplicații, utilizatorii pot verifica nivelurile de poluare din zona în care se află și pot primi sfaturi pentru a-și proteja sănătatea.</p>
-        <img src="img/about.jpg" alt="Imagine despre calitatea aerului">
-    </section>
-
-<section id="importance">
-    <h2>Importanța Calității Aerului</h2>
-    <p>Calitatea aerului pe care îl respirăm are un impact direct asupra sănătății noastre. Aerul poluat poate cauza diverse probleme de sănătate, inclusiv boli respiratorii, cardiovasculare și chiar cancer. De aceea, este esențial să fim conștienți de calitatea aerului și să luăm măsuri pentru a reduce expunerea la poluanți.</p>
-    <p>Valorile măsurate de stațiile de colectare sunt calculate în µg/m³. µg/m³ înseamnă micrograme pe metru cub.</p>
- <ul class="diamond-list">
-    <li><strong>Aer Curat:</strong> &lt; 20 µg/m³ 🌱</li>
-    <li><strong>Valoarea Aerului acceptabilă:</strong> 20.01 - 40 µg/m³ 🌼</li>
-    <li><strong>Valoare Moderată a Aerului:</strong> 40.01 - 50 µg/m³ 🌧️</li>
-    <li><strong>Aer Poluat:</strong> &gt; 50.01 - 100 µg/m³ 💔</li>
-    <li><strong>Aer Extrem de Poluat:</strong> &gt; 100.01  💔</li>
-</ul>
-    <p>O serie de efecte negative asupra sănătății au fost asociate cu expunerea atât la PM2.5, cât și la PM10. Pentru PM2.5, expunerile de scurtă durată (până la 24 de ore) au fost asociate cu mortalitate prematură, spitalizări crescute pentru cauze cardiace sau pulmonare, bronșită acută și cronică, atacuri de astm, vizite la urgențe, simptome respiratorii și restricții, zile de inactivitate. Aceste efecte adverse asupra sănătății au fost raportate în principal la sugari, copii și adulți în vârstă cu boli cardiace sau pulmonare preexistente. În plus, dintre toți poluanții atmosferici obișnuiți, PM2.5 este asociat cu cea mai mare proporție de efecte adverse asupra sănătății legate de poluarea aerului, atât în ​​Statele Unite, cât și în întreaga lume, conform Organizației Mondiale a Sănătății.</p>
-    <p>Expunerea pe termen scurt la PM10 a fost asociată în primul rând cu agravarea bolilor respiratorii, inclusiv astmul și boala pulmonară obstructivă cronică (BPOC), ducând la spitalizare și vizite la departamentul de urgență.</p>
-    <p>Expunerea pe termen lung (de la luni, la ani) la PM2.5 a fost legată de moartea prematură, în special la persoanele care au boli cronice de inimă sau plămâni, și creșterea redusă a funcției pulmonare la copii. Efectele expunerii pe termen lung la PM10 sunt mai puțin clare, deși mai multe studii sugerează o legătură între expunerea pe termen lung la PM10 și mortalitatea respiratorie.</p>
-        <img src="img/importance.jpg" alt="Importanța calității aerului">
-    </section>
-
-    <section id="pollutants">
-    <h2>Poluanți Comuni</h2>
-    <ul class="diamond-list">
-        <li><strong>Particulele fine (PM10):</strong> Acestea pot pătrunde adânc în plămâni și pot cauza inflamații și alte probleme respiratorii.</li>
-        <li><strong>Particulele fine (PM2.5):</strong> Acestea pot pătrunde adânc în plămâni și pot cauza inflamații și alte probleme respiratorii.</li>
-        <li><strong>Oxizii de azot (NOx):</strong> Proveniți în principal din emisiile vehiculelor, aceștia pot irita căile respiratorii și pot agrava afecțiuni precum astmul.</li>
-        <li><strong>Ozonul la nivelul solului (O3):</strong> Acesta poate cauza iritații ale ochilor și ale căilor respiratorii și poate reduce funcția pulmonară.</li>
-        <li><strong>Monoxidul de carbon (CO):</strong> Acest gaz incolor și inodor poate afecta transportul oxigenului în organism, ducând la simptome de oboseală și dureri de cap.</li>
-    </ul>
-        
-        <img src="img/pollutants.jpg" alt="Poluanți comuni">
-    </section>
-
-    <section id="app">
-        <h2>Aplicația Noastră</h2>
-       <p>
-    Aplicația Respiro este ușor de utilizat și esențială pentru monitorizarea calității aerului din jurul tău. Cu un design simplu și funcții intuitive, îți oferim informații precise pentru a lua cele mai bune decizii privind sănătatea ta și mediul înconjurător. 
-    <strong>Cel mai important indicator monitorizat este PM10</strong>, pentru că expunerea pe termen scurt la PM10 a fost asociată în primul rând cu agravarea bolilor respiratorii, inclusiv astmul și boala pulmonară obstructivă cronică (BPOC).
-</p>
-
-        <div class="buttons-section">
-            <a href="https://play.google.com/store/apps/details?id=com.tatilacratita.respiro" class="download-button" target="_blank">
-                <img src="img/google.jpg" alt="Icon Google"> GooglePlay
-            </a>
-           <a href="https://github.com/Tatilacratita/Respiro/raw/main/downloads/Respiro_2.0_release.apk"  class="download-button" download="Respiro_1.8_release.apk"> <img src="img/google.jpg" alt="Icon Download"> Descarcă APK
-    </a>
-        </div>
-
-        <div class="info-section">
-            <p>🔹 Poți accesa ultima versiune a aplicației,direct din Google Play, folosind  butonul de mai sus.</p>
-            <p>🔹 Dacă vrei să descarci direct fișierul APK, trebuie să activezi instalarea din surse necunoscute. Urmează acești pași:</p>
-            <ol style="list-style-position: inside; padding-left: 0; text-align: center; display: inline-block;">
-                <li>Accesează <strong>Setări</strong> pe telefonul tău.</li>
-                <li>Mergi la <strong>Securitate</strong> sau <strong>Confidențialitate</strong>.</li>
-                <li>Activează opțiunea <strong>Permite instalarea aplicațiilor din surse necunoscute</strong>.</li>
-                <li>Descarcă APK-ul și deschide-l pentru instalare.</li>
-                <li>Acceptă toate permisiunile necesare.</li>
-            </ol>
-            <p>După finalizarea instalării, vei putea utiliza aplicația Respiro fără probleme. 🚀</p>
-        </div>
-
-        <p style="text-align: center; font-weight: bold;">
-            Știi că te protejezi cu Respiro🌼🌼🌼? Verifică acum calitatea aerului din zona ta și ia măsuri pentru un viitor mai curat și mai sănătos!
-        </p>
-
-        <div class="aqicn-widget">
-            <iframe src="https://aqicn.org/here/widget/?token=9ca5ec86e10df6fe740e29811f4530ec9de31781&lang=ro" frameborder="0"></iframe>
-        </div>
-
-        <p style="text-align: center; font-size: 14px; color: #555; margin-top: 10px;">
-            📌 Datele privind calitatea aerului afișate pe site-ul și în aplicația Respiro sunt furnizate de 
-            <a href="https://aqicn.org/" target="_blank" style="color: #0073e6; text-decoration: none; font-weight: bold;">
-                World Air Quality Index (AQICN)
-            </a>. 
-            Ne bazăm pe surse de încredere pentru a-ți oferi informații precise și actualizate despre aerul pe care îl respiri. 🌍
-        </p>
-    </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Pentru mai multe informații, nu ezita să ne contactezi la <a href="mailto:respirofreshair@gmail.com">respirofreshair@gmail.com</a>.</p>
-    </section>
-    <section id="privacy">
-        <h2>Politica de Confidențialitate</h2>
-        <p>Respiro respectă confidențialitatea utilizatorilor săi și se angajează să protejeze informațiile acestora. Aplicația utilizează <strong>locația utilizatorului</strong> pentru a oferi informații despre calitatea aerului în zona în care se află.</p>
-        <p><strong>Date colectate:</strong> Aplicația nu colectează și nu stochează date personale sau informații identificabile ale utilizatorilor. Locația utilizatorului este utilizată strict pentru a accesa datele de poluare disponibile prin serviciul <em>OpenAQ API</em>.</p>
-        <p><strong>Partajarea datelor:</strong> Locația este trimisă către API-ul Aqicn (<a href="https://aqicn.org" target="_blank">aqicn.org</a> și <a href="https://waqi.info" target="_blank">waqi.info</a>) exclusiv pentru a obține date despre calitatea aerului.</p> Nicio altă informație personală nu este partajată cu terți.</p>
-        <p><strong>Consimțământ:</strong> Utilizarea locației necesită permisiunea explicită a utilizatorului. Aceasta poate fi acordată sau refuzată la lansarea aplicației.</p>
-        <p><strong>Utilizare transparentă:</strong> Datele de locație sunt utilizate doar pentru a îmbunătăți funcționalitatea aplicației și pentru a oferi informații precise despre calitatea aerului. Aplicația nu folosește locația în scopuri de marketing sau analiză.</p>
-        <p>Dacă aveți întrebări sau îngrijorări cu privire la confidențialitatea datelor, ne puteți contacta la <a href="mailto:respirofreshair@gmail.com">respirofreshair@gmail.com</a>.</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Respiro. Toate drepturile rezervate. © By Tati La Cratita</p>
-    </footer>
-
-    <script src="js/script.js"></script>
-</body>
-</html>
+</body></html>
