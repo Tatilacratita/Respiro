@@ -110,10 +110,10 @@
             font-family: 'Inter', sans-serif;
         }
         
-        /* Stiluri pentru aspectul dreptunghiular mai mare */
-        .container-large {
-            aspect-ratio: 50/16; /* Mai lat și mai scurt */
-            min-height: 400px;
+        /* Stiluri pentru aspectul dreptunghiular */
+        .container-rectangle {
+            aspect-ratio: 16/9;
+            min-height: 300px;
         }
         
         /* Container special pentru iframe care se adaptează la dimensiuni */
@@ -121,7 +121,7 @@
             position: relative;
             width: 100%;
             height: 0;
-            padding-bottom: 60%; /* Proporție mai lată pentru iframe */
+            padding-bottom: 75%; /* Proporție 4:3 pentru iframe */
         }
         
         .iframe-container iframe {
@@ -131,18 +131,17 @@
             width: 100%;
             height: 100%;
             border: 0;
-            border-radius: 0.5rem;
         }
         
         /* Stiluri pentru aspectul responsive */
         @media (max-width: 768px) {
-            .container-large {
+            .container-rectangle {
                 aspect-ratio: auto;
-                min-height: 300px;
+                min-height: auto;
             }
             
             .iframe-container {
-                padding-bottom: 50%;
+                padding-bottom: 60%; /* Proporție diferită pe mobile */
             }
         }
     </style>
