@@ -99,10 +99,10 @@
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
   
 <!-- Secțiune Indicatori + Widget AQI -->
-<div class="w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+<div class="flex flex-col md:flex-row w-full gap-6">
 
   <!-- Stânga: indicatorii -->
-  <div class="w-full rounded-lg overflow-hidden shadow-lg bg-white dark:bg-background-dark/50 p-6">
+  <div class="flex-1 rounded-lg overflow-hidden shadow-lg bg-white dark:bg-background-dark/50 p-6">
     <h3 class="text-2xl font-bold mb-4">Indicatori de Calitate a Aerului</h3>
     <ul class="space-y-3 text-subtle-light dark:text-subtle-dark">
       <li class="flex items-start">
@@ -139,13 +139,13 @@
   </div>
 
   <!-- Dreapta: widgetul AQI -->
-  <div class="w-full rounded-lg overflow-hidden shadow-lg bg-white dark:bg-background-dark/50 p-6">
+  <div class="flex-1 rounded-lg overflow-hidden shadow-lg bg-white dark:bg-background-dark/50 p-6">
     <iframe 
       src="https://aqicn.org/here/widget/?token=9ca5ec86e10df6fe740e29811f4530ec9de31781&lang=ro" 
       class="w-full h-[260px] border-0">
     </iframe>
   </div>
-</div>
+
 </div>
 
 </div>
