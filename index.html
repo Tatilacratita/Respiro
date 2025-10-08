@@ -98,6 +98,9 @@
 <div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
   
+<!-- Secțiune Indicatori + Widget AQI -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+  
   <!-- Stânga: indicatorii -->
   <div>
     <h3 class="text-2xl font-bold mb-4">Indicatori de Calitate a Aerului</h3>
@@ -137,21 +140,13 @@
 
   <!-- Dreapta: widgetul AQI -->
   <div class="rounded-lg overflow-hidden shadow-lg bg-white dark:bg-background-dark/50 p-4">
-    <div id="city-aqi-container">Se încarcă datele despre calitatea aerului...</div>
+    <iframe 
+      src="https://aqicn.org/here/widget/?token=9ca5ec86e10df6fe740e29811f4530ec9de31781&lang=ro" 
+      width="100%" height="260" frameborder="0">
+    </iframe>
   </div>
 
 </div>
-
-<!-- Script AQICN -->
-<script src="https://feed.aqicn.org/feed/v1/feed.js" type="text/javascript"></script>
-<script type="text/javascript">
-  _aqiFeed({
-    container: "city-aqi-container", 
-    city: "here", 
-    lang: "ro",
-    display: "%cityname: Calitatea aerului este %aqi (%details)"
-  });
-</script>
 
 </div>
 </div>
