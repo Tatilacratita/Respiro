@@ -99,12 +99,12 @@
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
   
 <!-- Secțiune Indicatori + Widget AQI -->
-<div class="flex flex-col md:flex-row w-full gap-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
 
   <!-- Stânga: indicatorii -->
-  <div class="flex-1 rounded-lg overflow-hidden shadow-lg bg-white dark:bg-background-dark/50 p-6">
+  <div class="bg-white dark:bg-background-dark/50 border border-border-light dark:border-border-dark rounded-lg p-6 flex flex-col">
     <h3 class="text-2xl font-bold mb-4">Indicatori de Calitate a Aerului</h3>
-    <ul class="space-y-3 text-subtle-light dark:text-subtle-dark">
+    <ul class="space-y-3 text-subtle-light dark:text-subtle-dark flex-grow">
       <li class="flex items-start">
         <svg class="h-6 w-6 text-primary mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
@@ -139,7 +139,7 @@
   </div>
 
   <!-- Dreapta: widgetul AQI -->
-  <div class="flex-1 rounded-lg overflow-hidden shadow-lg bg-white dark:bg-background-dark/50 p-6">
+  <div class="bg-white dark:bg-background-dark/50 border border-border-light dark:border-border-dark rounded-lg p-6 flex flex-col justify-center">
     <iframe 
       src="https://aqicn.org/here/widget/?token=9ca5ec86e10df6fe740e29811f4530ec9de31781&lang=ro" 
       class="w-full h-[260px] border-0">
@@ -147,7 +147,6 @@
   </div>
 
 </div>
-
 </div>
 </div>
 </section>
