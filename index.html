@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="ro"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Respiro - Air Quality Monitoring</title>
+<title>Respiro - Monitorizarea Calității Aerului</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
@@ -13,7 +13,7 @@
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#1dc962",
+                        "primary": "#3b82f6",
                         "background-light": "#f6f8f7",
                         "background-dark": "#112117",
                         "content-light": "#111714",
@@ -38,7 +38,7 @@
     </script>
 <style>
         .icon-primary {
-            color: #1dc962;
+            color: #3b82f6;
         }
     </style>
 </head>
@@ -53,16 +53,17 @@
 <h2 class="text-xl font-bold">Respiro</h2>
 </div>
 <nav class="hidden lg:flex items-center gap-8">
-<a class="text-sm font-medium hover:text-primary transition-colors" href="#">About Us</a>
-<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Air Quality</a>
-<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Pollutants</a>
-<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Our App</a>
-<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#about">Despre Noi</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#importance">Calitatea Aerului</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#pollutants">Poluanți</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#app">Aplicația Noastră</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#contact">Contact</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#privacy">Politică de Confidențialitate</a>
 </nav>
 <div class="flex items-center gap-4">
-<button class="bg-primary text-background-dark font-bold text-sm px-5 py-2.5 rounded-lg hover:bg-primary/90 transition-colors">
-                        Download App
-                    </button>
+<a class="bg-primary text-white font-bold text-sm px-5 py-2.5 rounded-lg hover:bg-primary/90 transition-colors" href="#app">
+                        Descarcă Aplicația
+                    </a>
 <button class="lg:hidden p-2">
 <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
 </button>
@@ -73,96 +74,129 @@
 <section class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
 <div class="relative rounded-xl overflow-hidden min-h-[500px] flex items-center justify-center text-center p-8 bg-cover bg-center" style='background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDEOphQybgQLFZDJHd7o0LXoKjz0z5eZAfeylf60G8EqkvlShmsaoF5NOY83OoeKkQ_NH9aZpJlV-OryPkP5crQs6DfDlgvAzBbLXiuOgOWbp3K3uSYOruU718Gf21ElRVkTsJozfWJN6YffyRSoNOt1AwvLTUSEBEnfd9zei3o6MEQnb9PP2FefJhZ7aJhRgVnVVcktRddpVdTAzgIlghNFQu4NO0LLvE-mqpTFMqvLfFQNHtCwv7X66LlcT99iVKogZMZIoS-eo4R");'>
 <div class="z-10 flex flex-col items-center gap-6 max-w-3xl">
-<h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tighter">Breathe Easier with Respiro</h1>
-<p class="text-lg sm:text-xl text-white/90">Monitor air quality in your area and take control of your health.</p>
-<button class="bg-primary text-background-dark font-bold text-base px-8 py-3 rounded-lg hover:bg-primary/90 transition-transform transform hover:scale-105">
-                            Download the App
-                        </button>
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tighter">Respiră Mai Ușor cu Respiro</h1>
+<p class="text-lg sm:text-xl text-white/90">Monitorizează calitatea aerului din zona ta și preia controlul asupra sănătății tale.</p>
+<a class="bg-primary text-white font-bold text-base px-8 py-3 rounded-lg hover:bg-primary/90 transition-transform transform hover:scale-105" href="#app">
+                            Descarcă Aplicația
+                        </a>
 </div>
 </div>
 </section>
 <section class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24" id="about">
 <div class="max-w-4xl mx-auto text-center">
-<h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-4">About Us</h2>
-<p class="text-lg text-subtle-light dark:text-subtle-dark">At Respiro, we are dedicated to providing accurate and real-time air quality information to help you make informed decisions about your health and well-being. Our team of environmental scientists and technology experts work tirelessly to ensure our data is reliable and accessible.</p>
+<h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-4">Despre Noi</h2>
+<p class="text-lg text-subtle-light dark:text-subtle-dark">La Respiro, suntem dedicați furnizării de informații precise și în timp real despre calitatea aerului pentru a vă ajuta să luați decizii informate cu privire la sănătatea și bunăstarea dumneavoastră. Echipa noastră de oameni de știință din domeniul mediului și experți în tehnologie lucrează neobosit pentru a se asigura că datele noastre sunt fiabile și accesibile.</p>
 </div>
 </section>
 <section class="bg-background-light dark:bg-background-dark py-16 sm:py-24" id="importance">
 <div class="container mx-auto px-4 sm:px-6 lg:px-8">
 <div class="max-w-4xl mx-auto text-center mb-12">
-<h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-4">The Importance of Air Quality</h2>
-<p class="text-lg text-subtle-light dark:text-subtle-dark">Air quality significantly impacts our health. High levels of pollutants can lead to respiratory issues, cardiovascular diseases, and other health problems. Monitoring air quality helps us understand the risks and take necessary precautions.</p>
+<h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-4">Importanța Calității Aerului</h2>
+<p class="text-lg text-subtle-light dark:text-subtle-dark">Calitatea aerului are un impact semnificativ asupra sănătății noastre. Nivelurile ridicate de poluanți pot duce la probleme respiratorii, boli cardiovasculare și alte probleme de sănătate. Monitorizarea calității aerului ne ajută să înțelegem riscurile și să luăm măsurile de precauție necesare. Aerul curat este esențial pentru o viață sănătoasă, permițând funcționarea optimă a corpului și reducând riscul de boli cronice. Expunerea la aer poluat poate avea efecte grave, de la iritații minore la afecțiuni pe termen lung.</p>
 </div>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-<div class="bg-white dark:bg-background-dark/50 border border-border-light dark:border-border-dark rounded-lg p-6 text-center shadow-sm">
-<p class="text-lg font-medium mb-2">PM2.5</p>
-<p class="text-4xl font-bold text-primary">35 <span class="text-xl font-medium text-subtle-light dark:text-subtle-dark">μg/m³</span></p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<div>
+<h3 class="text-2xl font-bold mb-4">Indicatori de Calitate a Aerului</h3>
+<ul class="space-y-2 text-subtle-light dark:text-subtle-dark">
+<li class="flex items-start"><svg class="h-6 w-6 text-primary mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg><span><span class="font-semibold text-content-light dark:text-content-dark">PM2.5:</span> Particule fine care pot pătrunde adânc în plămâni.</span></li>
+<li class="flex items-start"><svg class="h-6 w-6 text-primary mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg><span><span class="font-semibold text-content-light dark:text-content-dark">PM10:</span> Particule mai mari care pot irita ochii, nasul și gâtul.</span></li>
+<li class="flex items-start"><svg class="h-6 w-6 text-primary mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg><span><span class="font-semibold text-content-light dark:text-content-dark">Ozon (O₃):</span> Poate provoca dificultăți de respirație și poate agrava astmul.</span></li>
+<li class="flex items-start"><svg class="h-6 w-6 text-primary mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg><span><span class="font-semibold text-content-light dark:text-content-dark">Dioxid de Azot (NO₂):</span> Poate provoca inflamații ale căilor respiratorii.</span></li>
+<li class="flex items-start"><svg class="h-6 w-6 text-primary mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg><span><span class="font-semibold text-content-light dark:text-content-dark">Dioxid de Sulf (SO₂):</span> Poate afecta sistemul respirator.</span></li>
+</ul>
 </div>
-<div class="bg-white dark:bg-background-dark/50 border border-border-light dark:border-border-dark rounded-lg p-6 text-center shadow-sm">
-<p class="text-lg font-medium mb-2">PM10</p>
-<p class="text-4xl font-bold text-primary">60 <span class="text-xl font-medium text-subtle-light dark:text-subtle-dark">μg/m³</span></p>
-</div>
-<div class="bg-white dark:bg-background-dark/50 border border-border-light dark:border-border-dark rounded-lg p-6 text-center shadow-sm">
-<p class="text-lg font-medium mb-2">Ozone (O₃)</p>
-<p class="text-4xl font-bold text-primary">40 <span class="text-xl font-medium text-subtle-light dark:text-subtle-dark">ppb</span></p>
+<div class="rounded-lg overflow-hidden shadow-lg bg-white dark:bg-background-dark/50 p-4">
+<script src="https://feed.aqicn.org/feed/v1/feed.js" type="text/javascript"></script><span id="city-aqi-container"></span>
+<script charset="utf-8" type="text/javascript">_aqiFeed({ display: "%cityname, Calitatea Aerului este %aqi - %details", city: "here", lang: "ro", id: "city-aqi-container" });</script>
 </div>
 </div>
-<p class="max-w-4xl mx-auto text-center mt-8 text-subtle-light dark:text-subtle-dark">These pollutants, including particulate matter (PM2.5 and PM10) and ozone, are major contributors to air pollution. Elevated levels can cause immediate and long-term health effects, especially for vulnerable populations like children and the elderly.</p>
 </div>
 </section>
 <section class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24" id="pollutants">
 <div class="max-w-4xl mx-auto text-center mb-12">
-<h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-4">Common Pollutants</h2>
+<h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-4">Poluanți Comuni și Efectele Asupra Sănătății</h2>
+<p class="text-lg text-subtle-light dark:text-subtle-dark">Înțelegerea poluanților comuni și a modului în care aceștia afectează sănătatea este primul pas către protejarea dumneavoastră și a celor dragi. Mai jos sunt detaliate efectele principalilor poluanți atmosferici.</p>
 </div>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-<div class="bg-background-light dark:bg-background-dark/50 border border-border-light dark:border-border-dark rounded-lg p-6 flex flex-col gap-4">
-<div class="flex items-center gap-4">
-<div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-lg"><svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"><path d="M120,200H72a8,8,0,0,1,0-16h48a8,8,0,0,1,0,16Zm64-16H160a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Zm-24,32H104a8,8,0,0,0,0,16h56a8,8,0,0,0,0-16ZM232,92a76.08,76.08,0,0,1-76,76H76A52,52,0,0,1,76,64a53.26,53.26,0,0,1,8.92.76A76.08,76.08,0,0,1,232,92Zm-16,0A60.06,60.06,0,0,0,96,88.46a8,8,0,0,1-16-.92q.21-3.66.77-7.23A38.11,38.11,0,0,0,76,80a36,36,0,0,0,0,72h80A60.07,60.07,0,0,0,216,92Z"></path></svg></div>
-<h3 class="text-lg font-bold">Particulate Matter (PM)</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-white dark:bg-background-dark/50 border border-border-light dark:border-border-dark rounded-lg p-6 flex flex-col">
+<h3 class="text-xl font-bold mb-2">Particule în suspensie (PM2.5 &amp; PM10)</h3>
+<p class="text-subtle-light dark:text-subtle-dark flex-grow"><span class="font-semibold">Efecte:</span> Iritații ale ochilor, nasului, gâtului și plămânilor, tuse, strănut, dificultăți de respirație, agravarea astmului și a bolilor de inimă. Expunerea pe termen lung poate duce la bronșită cronică și mortalitate prematură.</p>
 </div>
-<p class="text-subtle-light dark:text-subtle-dark">Tiny particles that can penetrate deep into the lungs, causing respiratory and cardiovascular problems.</p>
+<div class="bg-white dark:bg-background-dark/50 border border-border-light dark:border-border-dark rounded-lg p-6 flex flex-col">
+<h3 class="text-xl font-bold mb-2">Ozon (O₃)</h3>
+<p class="text-subtle-light dark:text-subtle-dark flex-grow"><span class="font-semibold">Efecte:</span> Dificultăți de respirație, dureri în piept, tuse, iritarea gâtului. Poate agrava bronșita, emfizemul și astmul. Expunerea repetată poate deteriora permanent plămânii.</p>
 </div>
-<div class="bg-background-light dark:bg-background-dark/50 border border-border-light dark:border-border-dark rounded-lg p-6 flex flex-col gap-4">
-<div class="flex items-center gap-4">
-<div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-lg"><svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"><path d="M120,200H72a8,8,0,0,1,0-16h48a8,8,0,0,1,0,16Zm64-16H160a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Zm-24,32H104a8,8,0,0,0,0,16h56a8,8,0,0,0,0-16ZM232,92a76.08,76.08,0,0,1-76,76H76A52,52,0,0,1,76,64a53.26,53.26,0,0,1,8.92.76A76.08,76.08,0,0,1,232,92Zm-16,0A60.06,60.06,0,0,0,96,88.46a8,8,0,0,1-16-.92q.21-3.66.77-7.23A38.11,38.11,0,0,0,76,80a36,36,0,0,0,0,72h80A60.07,60.07,0,0,0,216,92Z"></path></svg></div>
-<h3 class="text-lg font-bold">Nitrogen Dioxide (NO₂)</h3>
-</div>
-<p class="text-subtle-light dark:text-subtle-dark">A gas primarily from vehicle emissions that can irritate the respiratory system and worsen asthma.</p>
-</div>
-<div class="bg-background-light dark:bg-background-dark/50 border border-border-light dark:border-border-dark rounded-lg p-6 flex flex-col gap-4">
-<div class="flex items-center gap-4">
-<div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-lg"><svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"><path d="M120,200H72a8,8,0,0,1,0-16h48a8,8,0,0,1,0,16Zm64-16H160a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Zm-24,32H104a8,8,0,0,0,0,16h56a8,8,0,0,0,0-16ZM232,92a76.08,76.08,0,0,1-76,76H76A52,52,0,0,1,76,64a53.26,53.26,0,0,1,8.92.76A76.08,76.08,0,0,1,232,92Zm-16,0A60.06,60.06,0,0,0,96,88.46a8,8,0,0,1-16-.92q.21-3.66.77-7.23A38.11,38.11,0,0,0,76,80a36,36,0,0,0,0,72h80A60.07,60.07,0,0,0,216,92Z"></path></svg></div>
-<h3 class="text-lg font-bold">Sulfur Dioxide (SO₂)</h3>
-</div>
-<p class="text-subtle-light dark:text-subtle-dark">A gas from burning fossil fuels that can harm the respiratory system and make breathing difficult.</p>
+<div class="bg-white dark:bg-background-dark/50 border border-border-light dark:border-border-dark rounded-lg p-6 flex flex-col">
+<h3 class="text-xl font-bold mb-2">Dioxid de Azot (NO₂)</h3>
+<p class="text-subtle-light dark:text-subtle-dark flex-grow"><span class="font-semibold">Efecte:</span> Iritarea căilor respiratorii, agravarea bolilor respiratorii, în special astmul. Contribuie la formarea ploilor acide și a particulelor fine.</p>
 </div>
 </div>
 </section>
 <section class="bg-primary/10 dark:bg-primary/20 py-16 sm:py-24" id="app">
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-<h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-4">Get the Respiro App</h2>
-<p class="text-lg text-subtle-light dark:text-subtle-dark max-w-2xl mx-auto mb-8">Download the Respiro app to monitor air quality in real-time, receive alerts, and get personalized recommendations for staying safe. Available on both iOS and Android.</p>
-<div class="flex flex-wrap justify-center gap-4">
-<button class="bg-primary text-background-dark font-bold text-base px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors">Download for iOS</button>
-<button class="bg-white dark:bg-background-dark text-content-light dark:text-content-dark font-bold text-base px-6 py-3 rounded-lg border border-border-light dark:border-border-dark hover:bg-background-light/50 dark:hover:bg-background-dark/50 transition-colors">Download for Android</button>
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-4">Aplicația Noastră - Respiro</h2>
+<p class="text-lg text-subtle-light dark:text-subtle-dark max-w-3xl mx-auto">Respiro vă oferă date în timp real despre calitatea aerului, alerte personalizate și recomandări pentru a vă proteja sănătatea. Este un instrument esențial pentru oricine dorește să respire un aer mai curat.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<div class="text-left">
+<h3 class="text-2xl font-bold mb-4">Cum se instalează aplicația (APK)</h3>
+<ol class="list-decimal list-inside space-y-2 text-subtle-light dark:text-subtle-dark">
+<li>Descărcați fișierul APK de pe site-ul nostru.</li>
+<li>Pe dispozitivul Android, accesați Setări &gt; Securitate.</li>
+<li>Activați opțiunea "Surse necunoscute" pentru a permite instalarea aplicațiilor din afara Google Play Store.</li>
+<li>Găsiți fișierul APK descărcat și atingeți-l pentru a începe instalarea.</li>
+<li>Urmați instrucțiunile de pe ecran pentru a finaliza instalarea.</li>
+</ol>
+<div class="mt-8 flex flex-wrap justify-center md:justify-start gap-4">
+<a class="bg-primary text-white font-bold text-base px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors flex items-center gap-2" href="https://play.google.com/store/apps/details?id=com.respiro.twa">
+<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.216 12.239c.02-1.21-.92-2.22-2.12-2.22h-1.07v-1.07c0-1.2-.99-2.17-2.2-2.17s-2.2.97-2.2 2.17v1.07h-4.3v-1.07c0-1.2-.99-2.17-2.2-2.17s-2.2.97-2.2 2.17v1.07H4.9c-1.2 0-2.17.99-2.17 2.2s.97 2.2 2.17 2.2h1.07v4.3H4.9c-1.2 0-2.17.99-2.17 2.2s.97 2.2 2.17 2.2h1.07v1.07c0 1.2.99 2.17 2.2 2.17s2.2-.97 2.2-2.17v-1.07h4.3v1.07c0 1.2.99 2.17 2.2 2.17s2.2-.97 2.2-2.17v-1.07h1.07c1.2 0 2.2-.99 2.2-2.2v-1.05l-.004-.004c.004-.004.004-.008.004-.012v-4.29zM15.816 6.949c.82 0 1.48.67 1.48 1.48s-.66 1.48-1.48 1.48-1.48-.66-1.48-1.48.66-1.48 1.48-1.48zM8.184 15.571c-.82 0-1.48-.66-1.48-1.48s.66-1.48 1.48-1.48 1.48.66 1.48 1.48-.66 1.48-1.48 1.48z"></path></svg>
+<span>Google Play</span>
+</a>
+<a class="bg-primary text-white font-bold text-base px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors flex items-center gap-2" href="https://github.com/Tati-la-cratita/respiro/raw/main/respiro.apk">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Descarcă APK</span>
+</a>
+</div>
+</div>
+<div class="flex justify-center">
+<img alt="Respiro App on smartphone" class="rounded-lg shadow-2xl max-w-xs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDn8sBYxQcFlKIVB5Ga7ZiptrP2hM2s_DqjFCnsb1csw34urKT_WGCbKa9sT1eHCcBaDuoiqiot1ghF1xS3cUItDN7girbDCeHV_vNjDedYCzj-PMudN27gdnqg74p-3ltO3BG6wjtqCT48QP7At1BDAWyp5z-kzQs4Gx8J_3JjG5jqttQ_fm1jAzNasSnZnVSL1Tnv1FzdODNHRqFYQVuSu0BaaUwYMsf78LYVNZMPjwnmPuzm1fcfXYdh3kX3DJGhCKXbSxyEcGV-"/>
+</div>
+</div>
+</div>
+</section>
+<section class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24" id="privacy">
+<div class="max-w-4xl mx-auto">
+<h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-8 text-center">Politică de Confidențialitate</h2>
+<div class="space-y-6 text-subtle-light dark:text-subtle-dark">
+<p>Respiro se angajează să vă respecte și să vă protejeze confidențialitatea. Această Politică de Confidențialitate explică modul în care gestionăm informațiile dumneavoastră.</p>
+<h3 class="text-xl font-bold text-content-light dark:text-content-dark pt-4">Date de Localizare</h3>
+<p>Utilizăm locația dispozitivului dumneavoastră exclusiv pentru a vă oferi date în timp real despre calitatea aerului din zona dumneavoastră curentă. Aceste informații sunt preluate din API-urile OpenAQ și Aqicn (aqicn.org și waqi.info).</p>
+<h3 class="text-xl font-bold text-content-light dark:text-content-dark pt-4">Colectarea și Stocarea Datelor</h3>
+<p>Respiro nu colectează și nu stochează date personale. Nu vă cerem să creați un cont și nu urmărim activitatea dumneavoastră în cadrul aplicației. Locația dumneavoastră este utilizată doar în scopul preluării datelor despre calitatea aerului și nu este stocată pe serverele noastre.</p>
+<h3 class="text-xl font-bold text-content-light dark:text-content-dark pt-4">Permisiunea de Localizare</h3>
+<p>Aplicația vă va solicita permisiunea explicită pentru a accesa locația dispozitivului dumneavoastră. Puteți refuza această permisiune, dar aplicația nu va putea furniza date despre calitatea aerului specifice locației.</p>
+<h3 class="text-xl font-bold text-content-light dark:text-content-dark pt-4">Marketing</h3>
+<p>Nu folosim datele dumneavoastră de localizare în scopuri de marketing și nu le partajăm cu terți în astfel de scopuri.</p>
 </div>
 </div>
 </section>
 </main>
-<footer class="bg-background-light dark:bg-background-dark border-t border-border-light dark:border-border-dark">
+<footer class="bg-background-light dark:bg-background-dark border-t border-border-light dark:border-border-dark" id="contact">
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
 <div class="flex flex-col md:flex-row justify-between items-center gap-6">
 <div class="text-center md:text-left">
-<p class="text-sm">For questions or support, please contact us at:</p>
-<a class="font-medium text-primary hover:underline" href="mailto:support@respiro.com">support@respiro.com</a> or <a class="font-medium text-primary hover:underline" href="tel:555-123-4567">(555) 123-4567</a>
+<p class="text-sm">Pentru întrebări sau suport, vă rugăm să ne contactați la:</p>
+<a class="font-medium text-primary hover:underline" href="mailto:respirofreshair@gmail.com">respirofreshair@gmail.com</a>
 </div>
 <div class="text-center text-sm text-subtle-light dark:text-subtle-dark">
-<span>© 2024 Respiro. All rights reserved.</span>
-<a class="ml-4 hover:text-primary underline" href="#">Privacy Policy</a>
+<p>© 2024 Respiro. Toate drepturile rezervate. © By Tati La Cratita.</p>
+<a class="ml-4 hover:text-primary underline" href="#privacy">Politică de Confidențialitate</a>
 </div>
 </div>
 </div>
 </footer>
 </div>
-
 </body></html>
