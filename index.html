@@ -110,10 +110,10 @@
             font-family: 'Inter', sans-serif;
         }
         
-        /* Stiluri pentru aspectul dreptunghiular */
-        .container-rectangle {
-            aspect-ratio: 16/9;
-            min-height: 300px;
+        /* Stiluri pentru aspectul dreptunghiular mai mare */
+        .container-large {
+            aspect-ratio: 16/6; /* Mai lat și mai scurt */
+            min-height: 400px;
         }
         
         /* Container special pentru iframe care se adaptează la dimensiuni */
@@ -121,7 +121,7 @@
             position: relative;
             width: 100%;
             height: 0;
-            padding-bottom: 75%; /* Proporție 4:3 pentru iframe */
+            padding-bottom: 60%; /* Proporție mai lată pentru iframe */
         }
         
         .iframe-container iframe {
@@ -131,28 +131,29 @@
             width: 100%;
             height: 100%;
             border: 0;
+            border-radius: 0.5rem;
         }
         
         /* Stiluri pentru aspectul responsive */
         @media (max-width: 768px) {
-            .container-rectangle {
+            .container-large {
                 aspect-ratio: auto;
-                min-height: auto;
+                min-height: 300px;
             }
             
             .iframe-container {
-                padding-bottom: 60%; /* Proporție diferită pe mobile */
+                padding-bottom: 50%;
             }
         }
     </style>
 </head>
-<body class="bg-gray-50 dark:bg-gray-900 p-6">
+<body class="bg-gray-50 dark:bg-gray-900 p-4 md:p-6">
     <!-- Secțiune Widget AQI + Indicatori -->
-    <div class="flex flex-col gap-6 w-full max-w-6xl mx-auto">
+    <div class="flex flex-col gap-8 w-full max-w-7xl mx-auto">
         
         <!-- Sus: widgetul AQI -->
-        <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6 flex flex-col container-rectangle">
-            <h3 class="text-2xl font-bold mb-4 text-gray-800 dark:text-white">Calitatea Aerului în Timp Real</h3>
+        <div class="bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-600 rounded-xl p-6 md:p-8 flex flex-col container-large shadow-lg">
+            <h3 class="text-2xl md:text-3xl font-bold mb-6 text-gray-800 dark:text-white">Calitatea Aerului în Timp Real</h3>
             <div class="flex-grow">
                 <div class="iframe-container">
                     <iframe 
@@ -163,40 +164,66 @@
         </div>
 
         <!-- Jos: indicatorii -->
-        <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6 flex flex-col container-rectangle">
-            <h3 class="text-2xl font-bold mb-4 text-gray-800 dark:text-white">Indicatori de Calitate a Aerului</h3>
-            <ul class="space-y-3 text-gray-600 dark:text-gray-300 flex-grow overflow-y-auto">
-                <li class="flex items-start">
-                    <svg class="h-6 w-6 text-blue-500 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-                    </svg>
-                    <span><span class="font-semibold text-gray-800 dark:text-gray-100">PM2.5:</span> Particule fine care pot pătrunde adânc în plămâni și pot afecta sistemul respirator și cardiovascular.</span>
-                </li>
-                <li class="flex items-start">
-                    <svg class="h-6 w-6 text-blue-500 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-                    </svg>
-                    <span><span class="font-semibold text-gray-800 dark:text-gray-100">PM10:</span> Particule mai mari care pot irita ochii, nasul și gâtul, și pot provoca probleme respiratorii.</span>
-                </li>
-                <li class="flex items-start">
-                    <svg class="h-6 w-6 text-blue-500 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-                    </svg>
-                    <span><span class="font-semibold text-gray-800 dark:text-gray-100">Ozon (O₃):</span> Poate provoca dificultăți de respirație, iritații ale ochilor și poate agrava astmul și alte boli respiratorii.</span>
-                </li>
-                <li class="flex items-start">
-                    <svg class="h-6 w-6 text-blue-500 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-                    </svg>
-                    <span><span class="font-semibold text-gray-800 dark:text-gray-100">Dioxid de Azot (NO₂):</span> Poate provoca inflamații ale căilor respiratorii și poate crește riscul de infecții respiratorii.</span>
-                </li>
-                <li class="flex items-start">
-                    <svg class="h-6 w-6 text-blue-500 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-                    </svg>
-                    <span><span class="font-semibold text-gray-800 dark:text-gray-100">Dioxid de Sulf (SO₂):</span> Poate afecta sistemul respirator, provocând tuse și dificultăți de respirație, în special la persoanele cu astm.</span>
-                </li>
-            </ul>
+        <div class="bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-600 rounded-xl p-6 md:p-8 flex flex-col container-large shadow-lg">
+            <h3 class="text-2xl md:text-3xl font-bold mb-6 text-gray-800 dark:text-white">Indicatori de Calitate a Aerului</h3>
+            <div class="flex-grow overflow-y-auto">
+                <ul class="grid grid-cols-1 lg:grid-cols-2 gap-4 text-gray-600 dark:text-gray-300">
+                    <li class="flex items-start p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
+                        <svg class="h-7 w-7 text-blue-500 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                        </svg>
+                        <div>
+                            <span class="font-semibold text-lg text-gray-800 dark:text-gray-100">PM2.5:</span>
+                            <p class="mt-1">Particule fine care pot pătrunde adânc în plămâni și pot afecta sistemul respirator și cardiovascular.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
+                        <svg class="h-7 w-7 text-blue-500 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                        </svg>
+                        <div>
+                            <span class="font-semibold text-lg text-gray-800 dark:text-gray-100">PM10:</span>
+                            <p class="mt-1">Particule mai mari care pot irita ochii, nasul și gâtul, și pot provoca probleme respiratorii.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
+                        <svg class="h-7 w-7 text-blue-500 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                        </svg>
+                        <div>
+                            <span class="font-semibold text-lg text-gray-800 dark:text-gray-100">Ozon (O₃):</span>
+                            <p class="mt-1">Poate provoca dificultăți de respirație, iritații ale ochilor și poate agrava astmul și alte boli respiratorii.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
+                        <svg class="h-7 w-7 text-blue-500 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                        </svg>
+                        <div>
+                            <span class="font-semibold text-lg text-gray-800 dark:text-gray-100">Dioxid de Azot (NO₂):</span>
+                            <p class="mt-1">Poate provoca inflamații ale căilor respiratorii și poate crește riscul de infecții respiratorii.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
+                        <svg class="h-7 w-7 text-blue-500 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                        </svg>
+                        <div>
+                            <span class="font-semibold text-lg text-gray-800 dark:text-gray-100">Dioxid de Sulf (SO₂):</span>
+                            <p class="mt-1">Poate afecta sistemul respirator, provocând tuse și dificultăți de respirație, în special la persoanele cu astm.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
+                        <svg class="h-7 w-7 text-blue-500 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                        </svg>
+                        <div>
+                            <span class="font-semibold text-lg text-gray-800 dark:text-gray-100">Monoxid de Carbon (CO):</span>
+                            <p class="mt-1">Gaz toxic care poate reduce capacitatea sângelui de a transporta oxigen către țesuturi și organe.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
 
     </div>
