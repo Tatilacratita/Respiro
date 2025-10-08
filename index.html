@@ -96,17 +96,52 @@
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 <div>
-<h3 class="text-2xl font-bold mb-4">Indicatori de Calitate a Aerului</h3>
-<ul class="space-y-2 text-subtle-light dark:text-subtle-dark">
-<li class="flex items-start"><svg class="h-6 w-6 text-primary mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg><span><span class="font-semibold text-content-light dark:text-content-dark">PM2.5:</span> Particule fine care pot pătrunde adânc în plămâni.</span></li>
-<li class="flex items-start"><svg class="h-6 w-6 text-primary mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg><span><span class="font-semibold text-content-light dark:text-content-dark">PM10:</span> Particule mai mari care pot irita ochii, nasul și gâtul.</span></li>
-<li class="flex items-start"><svg class="h-6 w-6 text-primary mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg><span><span class="font-semibold text-content-light dark:text-content-dark">Ozon (O₃):</span> Poate provoca dificultăți de respirație și poate agrava astmul.</span></li>
-<li class="flex items-start"><svg class="h-6 w-6 text-primary mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg><span><span class="font-semibold text-content-light dark:text-content-dark">Dioxid de Azot (NO₂):</span> Poate provoca inflamații ale căilor respiratorii.</span></li>
-<li class="flex items-start"><svg class="h-6 w-6 text-primary mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg><span><span class="font-semibold text-content-light dark:text-content-dark">Dioxid de Sulf (SO₂):</span> Poate afecta sistemul respirator.</span></li>
-</ul>
-<div class="rounded-lg overflow-hidden shadow-lg bg-white dark:bg-background-dark/50 p-4">
-  <div id="city-aqi-container"></div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+  
+  <!-- Stânga: indicatorii -->
+  <div>
+    <h3 class="text-2xl font-bold mb-4">Indicatori de Calitate a Aerului</h3>
+    <ul class="space-y-2 text-subtle-light dark:text-subtle-dark">
+      <li class="flex items-start">
+        <svg class="h-6 w-6 text-primary mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+        </svg>
+        <span><span class="font-semibold">PM2.5:</span> Particule fine care pot pătrunde adânc în plămâni.</span>
+      </li>
+      <li class="flex items-start">
+        <svg class="h-6 w-6 text-primary mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+        </svg>
+        <span><span class="font-semibold">PM10:</span> Particule mai mari care pot irita ochii, nasul și gâtul.</span>
+      </li>
+      <li class="flex items-start">
+        <svg class="h-6 w-6 text-primary mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+        </svg>
+        <span><span class="font-semibold">Ozon (O₃):</span> Poate provoca dificultăți de respirație și poate agrava astmul.</span>
+      </li>
+      <li class="flex items-start">
+        <svg class="h-6 w-6 text-primary mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+        </svg>
+        <span><span class="font-semibold">Dioxid de Azot (NO₂):</span> Poate provoca inflamații ale căilor respiratorii.</span>
+      </li>
+      <li class="flex items-start">
+        <svg class="h-6 w-6 text-primary mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+        </svg>
+        <span><span class="font-semibold">Dioxid de Sulf (SO₂):</span> Poate afecta sistemul respirator.</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Dreapta: widgetul AQI -->
+  <div class="rounded-lg overflow-hidden shadow-lg bg-white dark:bg-background-dark/50 p-4">
+    <div id="city-aqi-container">Se încarcă datele despre calitatea aerului...</div>
+  </div>
+
 </div>
+
 <!-- Script AQICN -->
 <script src="https://feed.aqicn.org/feed/v1/feed.js" type="text/javascript"></script>
 <script type="text/javascript">
@@ -117,6 +152,7 @@
     display: "%cityname: Calitatea aerului este %aqi (%details)"
   });
 </script>
+
 </div>
 </div>
 </section>
