@@ -147,10 +147,22 @@
     </style>
 </head>
 <body class="bg-gray-50 dark:bg-gray-900 p-6">
-    <!-- Secțiune Indicatori + Widget AQI -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-6xl mx-auto">
+    <!-- Secțiune Widget AQI + Indicatori -->
+    <div class="flex flex-col gap-6 w-full max-w-6xl mx-auto">
         
-        <!-- Stânga: indicatorii -->
+        <!-- Sus: widgetul AQI -->
+        <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6 flex flex-col container-rectangle">
+            <h3 class="text-2xl font-bold mb-4 text-gray-800 dark:text-white">Calitatea Aerului în Timp Real</h3>
+            <div class="flex-grow">
+                <div class="iframe-container">
+                    <iframe 
+                        src="https://aqicn.org/here/widget/?token=9ca5ec86e10df6fe740e29811f4530ec9de31781&lang=ro">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Jos: indicatorii -->
         <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6 flex flex-col container-rectangle">
             <h3 class="text-2xl font-bold mb-4 text-gray-800 dark:text-white">Indicatori de Calitate a Aerului</h3>
             <ul class="space-y-3 text-gray-600 dark:text-gray-300 flex-grow overflow-y-auto">
@@ -185,18 +197,6 @@
                     <span><span class="font-semibold text-gray-800 dark:text-gray-100">Dioxid de Sulf (SO₂):</span> Poate afecta sistemul respirator, provocând tuse și dificultăți de respirație, în special la persoanele cu astm.</span>
                 </li>
             </ul>
-        </div>
-
-        <!-- Dreapta: widgetul AQI -->
-        <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6 flex flex-col container-rectangle">
-            <h3 class="text-2xl font-bold mb-4 text-gray-800 dark:text-white">Calitatea Aerului în Timp Real</h3>
-            <div class="flex-grow">
-                <div class="iframe-container">
-                    <iframe 
-                        src="https://aqicn.org/here/widget/?token=9ca5ec86e10df6fe740e29811f4530ec9de31781&lang=ro">
-                    </iframe>
-                </div>
-            </div>
         </div>
 
     </div>
