@@ -104,11 +104,19 @@
 <li class="flex items-start"><svg class="h-6 w-6 text-primary mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg><span><span class="font-semibold text-content-light dark:text-content-dark">Dioxid de Azot (NO₂):</span> Poate provoca inflamații ale căilor respiratorii.</span></li>
 <li class="flex items-start"><svg class="h-6 w-6 text-primary mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg><span><span class="font-semibold text-content-light dark:text-content-dark">Dioxid de Sulf (SO₂):</span> Poate afecta sistemul respirator.</span></li>
 </ul>
-</div>
 <div class="rounded-lg overflow-hidden shadow-lg bg-white dark:bg-background-dark/50 p-4">
-<script src="https://feed.aqicn.org/feed/v1/feed.js" type="text/javascript"></script><span id="city-aqi-container"></span>
-<script charset="utf-8" type="text/javascript">_aqiFeed({ display: "%cityname, Calitatea Aerului este %aqi - %details", city: "here", lang: "ro", id: "city-aqi-container" });</script>
+  <div id="city-aqi-container"></div>
 </div>
+<!-- Script AQICN -->
+<script src="https://feed.aqicn.org/feed/v1/feed.js" type="text/javascript"></script>
+<script type="text/javascript">
+  _aqiFeed({
+    container: "city-aqi-container", 
+    city: "here", 
+    lang: "ro",
+    display: "%cityname: Calitatea aerului este %aqi (%details)"
+  });
+</script>
 </div>
 </div>
 </section>
