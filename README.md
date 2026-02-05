@@ -49,8 +49,9 @@ Pentru mai multe informații sau întrebări, nu ezita să ne contactezi la [res
 
 3. **Instalează aplicația pe telefonul tău :**
     ```sh
-    Notă: Aplicația Respiro Fresh Air este acum disponibila în Google Play :
-    https://play.google.com/store/apps/details?id=com.tatilacratita.respiro&hl=ro
+  > Notă: Aplicația **Respiro Fresh Air** este disponibilă în Google Play:
+
+👉 [Deschide în Google Play](https://play.google.com/store/apps/details?id=com.tatilacratita.respiro&hl=ro)
 
 ## Contribuie
 
